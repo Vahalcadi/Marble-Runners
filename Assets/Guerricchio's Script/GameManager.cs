@@ -8,7 +8,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance != null)
+            Destroy(Instance.gameObject);
+        else
+            Instance = this;
     }
 
     public void RespawnBall()

@@ -1,12 +1,20 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody))]
 public class GyroscopicMovement : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
     private Vector3 moveVector;
+
+    [Header("Shake Jump")]
+    [SerializeField] private float yVelocity;
+    [SerializeField] private float shakeDetectionThreshold;
+    [SerializeField] private float minShakeInterval;
+
+    private float sqrShakeDetectionThreshold;
+    private float timeSinceLastShake;
 
     private void Awake()
     {
@@ -21,15 +29,28 @@ public class GyroscopicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2);
         moveVector = new Vector3(InputManager.Instance.Move().x, 0, -InputManager.Instance.Move().z);
+
+        if (InputManager.Instance.Move().magnitude >= sqrShakeDetectionThreshold
+            && Time.unscaledTime >= timeSinceLastShake + minShakeInterval)
+        {
+            Jump(); //???
+            timeSinceLastShake = Time.unscaledTime;
+        }
+
         Debug.Log(moveVector);
         //rb.linearVelocity = moveVector * speed;
     }
 
     private void FixedUpdate()
     {
-        
+
         rb.AddForce(moveVector * acceleration, ForceMode.Force);
+    }
+
+    private void Jump()
+    {
+        rb.AddForce(Vector3.up * yVelocity, ForceMode.Impulse);
     }
 }

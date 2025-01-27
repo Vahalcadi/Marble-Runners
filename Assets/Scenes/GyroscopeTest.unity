@@ -924,6 +924,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 10
   maxSpeed: 5
+  yVelocity: 5
+  shakeDetectionThreshold: 3.6
+  minShakeInterval: 0.2
 --- !u!1 &979270547
 GameObject:
   m_ObjectHideFlags: 0
