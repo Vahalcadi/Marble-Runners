@@ -6,6 +6,9 @@ public class GyroscopicMovement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
+
+    [Range(0.1f, 1)][SerializeField] private float xMultiplier;
+    [Range(0.1f, 1)][SerializeField] private float zMultiplier;
     private Vector3 moveVector;
 
     [Header("Shake Jump")]
@@ -32,7 +35,7 @@ public class GyroscopicMovement : MonoBehaviour
     void Update()
     {
         sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2);
-        moveVector = new Vector3(InputManager.Instance.Move().x, 0, -InputManager.Instance.Move().z);
+        moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
 
         if (IsGrounded)
         {
