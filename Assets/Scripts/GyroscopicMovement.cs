@@ -29,12 +29,12 @@ public class GyroscopicMovement : MonoBehaviour
     void Start()
     {
         rb.maxLinearVelocity = maxSpeed;
+        sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2);
         moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
 
         if (IsGrounded)
@@ -45,7 +45,7 @@ public class GyroscopicMovement : MonoBehaviour
                 Jump();
                 timeSinceLastShake = Time.unscaledTime;
             }
-        }   
+        }
 
         //rb.linearVelocity = moveVector * speed;
     }
@@ -57,8 +57,8 @@ public class GyroscopicMovement : MonoBehaviour
 
     private void Jump()
     {
-        //rb.AddForce(Vector3.up * yVelocity, ForceMode.Impulse);
-        rb.linearVelocity = Vector3.up * yVelocity;
+        rb.AddForce(Vector3.up * yVelocity, ForceMode.Impulse);
+        //rb.linearVelocity = Vector3.up * yVelocity;
         IsGrounded = false;
     }
 
