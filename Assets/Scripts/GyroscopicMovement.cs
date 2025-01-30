@@ -7,8 +7,8 @@ public class GyroscopicMovement : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
 
-    [Range(0.1f, 1)][SerializeField] private float xMultiplier;
-    [Range(0.1f, 1)][SerializeField] private float zMultiplier;
+    [Range(0.1f, 10)][SerializeField] private float xMultiplier;
+    [Range(0.1f, 10)][SerializeField] private float zMultiplier;
     private Vector3 moveVector;
 
     [Header("Shake Jump")]

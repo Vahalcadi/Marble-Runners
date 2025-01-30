@@ -758,10 +758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa23a07d611d2564c82b3b5360c7f609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 5
-  maxSpeed: 3.5
-  xMultiplier: 1
-  zMultiplier: 1
+  acceleration: 7.5
+  maxSpeed: 15
+  xMultiplier: 4
+  zMultiplier: 4
   yVelocity: 10
   shakeDetectionThreshold: 3.6
   minShakeInterval: 0.2
@@ -876,7 +876,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1340,11 +1340,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -50
+  near clip plane: -1000
   far clip plane: 5000
   field of view: 97.3
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 35
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2193,8 +2193,8 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 97.3
-    OrthographicSize: 15
-    NearClipPlane: -50
+    OrthographicSize: 35
+    NearClipPlane: -1000
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -4544,7 +4544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2984840804107416920, guid: ce3006146b5bffb41afa3e3d6750cad2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.99
+      value: -52
       objectReference: {fileID: 0}
     - target: {fileID: 2984840804107416920, guid: ce3006146b5bffb41afa3e3d6750cad2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6127,7 +6127,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 740254417}
