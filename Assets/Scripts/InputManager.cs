@@ -18,10 +18,10 @@ public class InputManager : MonoBehaviour
     public Vector3 Move()
     {
         Vector3 vector = controls.Player.Movement.ReadValue<Vector3>();
-
+       
         vector = Quaternion.Euler(-90, 0, 0) * vector;
 
-        return vector;
+        return vector.AdjustToIsometricPlane();
     }
 
     public Vector3 Jump()
