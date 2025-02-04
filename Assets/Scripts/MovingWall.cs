@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MovingWalls : MonoBehaviour
+public class MovingWall : MonoBehaviour
 {
     [SerializeField] private Transform[] points;
     [SerializeField] private float lerpDuration;

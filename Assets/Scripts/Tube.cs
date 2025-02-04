@@ -1,12 +1,12 @@
 using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class Catapult : MonoBehaviour
+public class Tube : MonoBehaviour
 {
     private GameObject ball;
     [SerializeField] private AnimationCurve curve;
     [SerializeField] private float duration;
-    //[SerializeField] private float height;
     [SerializeField] private float timeBeforeLaunch;
     [SerializeField] private Transform start;
     [SerializeField] private Transform arrival;
@@ -16,24 +16,23 @@ public class Catapult : MonoBehaviour
     //private IEnumerator LaunchBall()
     //{
     //    float t = 0;
+    //    float percentage = 0;
     //    ball.GetComponent<Rigidbody>().useGravity = false;
     //    ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
 
-    //    Vector3 end = new Vector3(arrival.position.x, arrival.position.y, start.position.z);
-
     //    yield return new WaitForSeconds(timeBeforeLaunch);
 
-    //    while (t < duration)
+    //    while (percentage <= 1)
     //    {
 
     //        t += Time.deltaTime;
 
-    //        float linearT = t / duration;
-    //        float heightT = curve.Evaluate(linearT);
+    //        percentage = t / duration;
+    //        float height = curve.Evaluate(percentage);
 
-    //        float height = Mathf.Lerp(0, this.height, heightT);
+    //        Vector3 arrival = new Vector3(this.arrival.transform.position.x, transform.position.y + height, this.arrival.transform.position.z);
 
-    //        ball.transform.position = Vector3.Lerp(start.position, end, linearT) + new Vector3(0, height, 0);
+    //        ball.transform.position = Vector3.Lerp(start.position, arrival, percentage);
 
     //        yield return null;
     //    }
@@ -41,6 +40,7 @@ public class Catapult : MonoBehaviour
     //    ball.GetComponent<Rigidbody>().useGravity = true;
     //    ball = null;
     //    InputManager.Instance.OnEnable();
+    //    coroutine = null;
     //}
 
     private IEnumerator LaunchBall()
@@ -77,6 +77,7 @@ public class Catapult : MonoBehaviour
         InputManager.Instance.OnEnable();
         coroutine = null;
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
