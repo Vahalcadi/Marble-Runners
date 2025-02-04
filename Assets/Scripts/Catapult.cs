@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Drawing;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Catapult : MonoBehaviour
@@ -49,7 +47,7 @@ public class Catapult : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ball = other.gameObject;
-            InputManager.Instance.OnDisable(); 
+            InputManager.Instance.OnDisable();
             StartCoroutine(LaunchBall());
         }
     }
