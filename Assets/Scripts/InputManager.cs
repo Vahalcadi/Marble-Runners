@@ -33,12 +33,12 @@ public class InputManager : MonoBehaviour
         return vector;
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         controls.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         controls.Disable();
     }
