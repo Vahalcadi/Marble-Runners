@@ -35,10 +35,12 @@ public class GyroscopicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Screen.orientation == ScreenOrientation.Portrait)
+        /*if(Screen.orientation == ScreenOrientation.Portrait)
             moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
        else
-            moveVector = new Vector3(InputManager.Instance.Move().z * zMultiplier, 0, InputManager.Instance.Move().x * xMultiplier);
+            moveVector = new Vector3(InputManager.Instance.Move().z * zMultiplier, 0, InputManager.Instance.Move().x * xMultiplier);*/
+
+        moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
 
         if (IsGrounded)
         {
