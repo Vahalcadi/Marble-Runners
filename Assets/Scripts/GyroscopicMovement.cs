@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Splines;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(SplineAnimate))]
 public class GyroscopicMovement : MonoBehaviour
 {
+    [SerializeField] private SplineAnimate splineAnimate;
     private Rigidbody rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
@@ -71,6 +73,23 @@ public class GyroscopicMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
             IsGrounded = true;
+    }
+
+    private void SplineAnimateCompleted()
+    {
+        Debug.Log(splineAnimate.ElapsedTime);
+        splineAnimate.Container = null;
+        rb.useGravity = true;
+        InputManager.Instance.OnEnable();
+    }
+
+    private void OnEnable()
+    {
+        splineAnimate.Completed += SplineAnimateCompleted;
+    }
+    private void OnDisable()
+    {
+        splineAnimate.Completed -= SplineAnimateCompleted;
     }
 
     /*private void OnCollisionExit(Collision collision)
