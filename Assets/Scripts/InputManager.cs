@@ -14,8 +14,9 @@ public class InputManager : MonoBehaviour
             Instance = this;
 
         controls = new PlayerControls();
-
+#if UNITY_ANDROID && !UNITY_EDITOR
         InputSystem.EnableDevice(Accelerometer.current);
+#endif
     }
 
     public Vector3 Move()
