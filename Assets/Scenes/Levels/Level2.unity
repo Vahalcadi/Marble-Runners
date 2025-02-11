@@ -5917,6 +5917,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+--- !u!1 &1393187087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2841355301328136173, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 1393187086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1427337450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6560,6 +6565,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 866711835}
+    - target: {fileID: 184352696016266694, guid: 91d579d61873bba458cf238c7b30ee03, type: 3}
+      propertyPath: optionsPanel
+      value: 
+      objectReference: {fileID: 1393187087}
     - target: {fileID: 184352696016266694, guid: 91d579d61873bba458cf238c7b30ee03, type: 3}
       propertyPath: objectivesText
       value: 

@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
-    public GameObject pauseButton;
-    public TextMeshProUGUI objectivesText;
-
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject pauseButton;
+    [SerializeField] private TextMeshProUGUI objectivesText;
+    [SerializeField] private GameObject optionsPanel;
     private bool isPaused = false;
 
     //private void Awake()
@@ -27,6 +27,7 @@ public class PauseManager : MonoBehaviour
         pauseButton.SetActive(!isPaused);
 
         Time.timeScale = isPaused ? 0f : 1f;
+        optionsPanel.SetActive(false);
     }
 
     public void UpdateObjectives(string[] objectives)
@@ -49,5 +50,15 @@ public class PauseManager : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
+    }
+    public void OpenOptions()
+    {
+        optionsPanel.SetActive(true);
+        pauseMenuUI.SetActive(false);
+    }
+    public void CloseOptions()
+    {
+        optionsPanel.SetActive(false);
+        pauseMenuUI.SetActive(true);
     }
 }

@@ -1064,6 +1064,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePause
       objectReference: {fileID: 0}
+    - target: {fileID: 1729770498994373399, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906153927}
+    - target: {fileID: 1729770498994373399, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePause
+      objectReference: {fileID: 0}
     - target: {fileID: 2106913567206422864, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1152,6 +1160,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePause
       objectReference: {fileID: 0}
+    - target: {fileID: 4234418464546268346, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906153927}
+    - target: {fileID: 4234418464546268346, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886599183035281058, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 906153927}
+    - target: {fileID: 4886599183035281058, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseOptions
+      objectReference: {fileID: 0}
     - target: {fileID: 7164050717736356565, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1161,6 +1185,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+--- !u!1 &226676509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2841355301328136173, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 226676508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &236249555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1859,6 +1888,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1738852408}
+    - target: {fileID: 184352696016266694, guid: 91d579d61873bba458cf238c7b30ee03, type: 3}
+      propertyPath: optionsPanel
+      value: 
+      objectReference: {fileID: 226676509}
     - target: {fileID: 184352696016266694, guid: 91d579d61873bba458cf238c7b30ee03, type: 3}
       propertyPath: objectivesText
       value: 
