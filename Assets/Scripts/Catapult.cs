@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Splines;
 
+[RequireComponent(typeof(SplineContainer))]
 public class Catapult : MonoBehaviour
 {
-    private GameObject ball;
+    /*private GameObject ball;
     [SerializeField] private AnimationCurve curve;
     [SerializeField] private float duration;
     //[SerializeField] private float height;
@@ -11,7 +14,7 @@ public class Catapult : MonoBehaviour
     [SerializeField] private Transform start;
     [SerializeField] private Transform arrival;
 
-    private Coroutine coroutine;
+    private Coroutine coroutine;*/
 
     //private IEnumerator LaunchBall()
     //{
@@ -43,7 +46,7 @@ public class Catapult : MonoBehaviour
     //    InputManager.Instance.OnEnable();
     //}
 
-    private IEnumerator LaunchBall()
+    /*private IEnumerator LaunchBall()
     {
         float t = 0;
         float percentage = 0;
@@ -76,14 +79,71 @@ public class Catapult : MonoBehaviour
         ball = null;
         InputManager.Instance.OnEnable();
         coroutine = null;
+    }*/
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && coroutine == null)
+        {
+            ball = other.gameObject;
+            InputManager.Instance.OnDisable();
+            coroutine = StartCoroutine(LaunchBall());
+        }
+    }*/
+
+    private SplineAnimate ballSplineAnimate;
+    private Rigidbody ballRigidBody;
+    private SplineContainer splineContainer;
+    [SerializeField] private float timeBeforeLaunch;
+
+    [SerializeField] private SplineAnimate.Method animationMethod = SplineAnimate.Method.Speed;
+    [Header("if animationMethod is time")]
+    [SerializeField] private float duration = 3;
+    [Header("if animationMethod is speed")]
+    [SerializeField] private float speed = 15;
+
+    private Coroutine coroutine;
+
+
+    public IEnumerator LaunchBall()
+    {
+        yield return new WaitForSeconds(timeBeforeLaunch);
+        ballSplineAnimate.Play();
+    }
+
+    private void Start()
+    {
+        splineContainer = GetComponent<SplineContainer>();
+    }
+
+    private void ResetCoroutine()
+    {
+        ballSplineAnimate.Completed -= ResetCoroutine;
+        ballRigidBody = null;
+        ballSplineAnimate = null;
+        coroutine = null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && coroutine == null)
         {
-            ball = other.gameObject;
             InputManager.Instance.OnDisable();
+            ballRigidBody = other.GetComponent<Rigidbody>();
+            ballSplineAnimate = other.GetComponent<SplineAnimate>();
+
+            ballRigidBody.useGravity = false;
+            ballSplineAnimate.Container = splineContainer;
+            ballRigidBody.linearVelocity = Vector3.zero;
+            ballRigidBody.angularVelocity = Vector3.zero;
+
+            if (animationMethod == SplineAnimate.Method.Time)
+                ballSplineAnimate.Duration = duration;
+            else
+                ballSplineAnimate.MaxSpeed = speed;
+
+            ballSplineAnimate.Completed += ResetCoroutine;
+
             coroutine = StartCoroutine(LaunchBall());
         }
     }

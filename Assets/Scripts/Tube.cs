@@ -9,6 +9,12 @@ public class Tube : MonoBehaviour
     private Rigidbody ballRigidBody;
     private SplineContainer splineContainer;
 
+    [SerializeField] private SplineAnimate.Method animationMethod = SplineAnimate.Method.Speed;
+    [Header("if animationMethod is time")]
+    [SerializeField] private float duration = 3;
+    [Header("if animationMethod is speed")]
+    [SerializeField] private float speed = 15;
+
     private bool hasStarted;
 
     private void Start()
@@ -30,6 +36,11 @@ public class Tube : MonoBehaviour
             ballSplineAnimate.Container = splineContainer;
             ballRigidBody.linearVelocity = Vector3.zero;
             ballRigidBody.angularVelocity = Vector3.zero;
+
+            if(animationMethod == SplineAnimate.Method.Time)
+                ballSplineAnimate.Duration = duration;
+            else
+                ballSplineAnimate.MaxSpeed = speed;
 
             ballSplineAnimate.Play();
         }
