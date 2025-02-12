@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: ec835a9b45e00154a918819a63caf9f2
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: a4eab0083cbe06d45bace9d4f7653a0b
   - enabled: 1
     path: Assets/Guerricchio's Assets/Guerricchio's Scenes/Level1 1.unity
     guid: 8c6974acb99ab8f409059a2d36740d0b
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level2.unity
-    guid: ec835a9b45e00154a918819a63caf9f2
   - enabled: 1
     path: Assets/Scenes/Levels/Level3.unity
     guid: 3480c683284dd844f914d3134ce90e15

@@ -286,12 +286,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2262232474755486475, guid: 707c2c05052a52c40a98754bdc4926f0, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: be3d90a3d0d575e4dbb9bb835581cb01, type: 2}
-    m_RemovedComponents:
-    - {fileID: 150923065872516267, guid: 707c2c05052a52c40a98754bdc4926f0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -353,12 +348,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Tube.C (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8166682543149758634, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: be3d90a3d0d575e4dbb9bb835581cb01, type: 2}
-    m_RemovedComponents:
-    - {fileID: 7076446106141326811, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -420,12 +410,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Tube.C
       objectReference: {fileID: 0}
-    - target: {fileID: 8166682543149758634, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: be3d90a3d0d575e4dbb9bb835581cb01, type: 2}
-    m_RemovedComponents:
-    - {fileID: 7076446106141326811, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -487,12 +472,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2262232474755486475, guid: 707c2c05052a52c40a98754bdc4926f0, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: be3d90a3d0d575e4dbb9bb835581cb01, type: 2}
-    m_RemovedComponents:
-    - {fileID: 150923065872516267, guid: 707c2c05052a52c40a98754bdc4926f0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -37,22 +36,31 @@ public class Tube : MonoBehaviour
             ballRigidBody.linearVelocity = Vector3.zero;
             ballRigidBody.angularVelocity = Vector3.zero;
 
-            if(animationMethod == SplineAnimate.Method.Time)
+            ballSplineAnimate.AnimationMethod = animationMethod;
+
+            if (ballSplineAnimate.AnimationMethod == SplineAnimate.Method.Time)
                 ballSplineAnimate.Duration = duration;
             else
                 ballSplineAnimate.MaxSpeed = speed;
+
+            ballSplineAnimate.ElapsedTime = 0;
+            ballRigidBody.interpolation = RigidbodyInterpolation.None;
+            ballSplineAnimate.Completed += ResetCoroutine;
 
             ballSplineAnimate.Play();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void ResetCoroutine()
     {
-        if (other.CompareTag("Player") && hasStarted)
-        {
-            hasStarted = false;
-            ballRigidBody = null;
-            ballSplineAnimate = null;
-        }
+        ballSplineAnimate.Completed -= ResetCoroutine;
+
+        ballRigidBody.useGravity = true;
+        InputManager.Instance.OnEnable();
+        hasStarted = false;
+        ballRigidBody.interpolation = RigidbodyInterpolation.Interpolate;
+        ballRigidBody = null;
+        ballSplineAnimate.Container = null;
+        ballSplineAnimate = null;
     }
 }
