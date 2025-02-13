@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 184352696016266694, guid: 91d579d61873bba458cf238c7b30ee03, type: 3}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
