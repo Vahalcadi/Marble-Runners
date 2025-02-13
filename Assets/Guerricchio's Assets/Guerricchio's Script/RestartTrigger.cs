@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestartTrigger : MonoBehaviour
 {
@@ -6,7 +7,11 @@ public class RestartTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.RestartLevel();
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
         }
     }
 }
