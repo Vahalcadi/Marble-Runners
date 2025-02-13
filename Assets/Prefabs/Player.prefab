@@ -119,9 +119,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6973391982783527775}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 1.5
+  m_Mass: 6
+  m_Drag: 2
+  m_AngularDrag: 3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa23a07d611d2564c82b3b5360c7f609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 5
-  maxSpeed: 15
-  xMultiplier: 0.7
-  zMultiplier: 0.7
+  acceleration: 50
+  maxSpeed: 1000
+  xMultiplier: 5
+  zMultiplier: 5
   yVelocity: 10
   shakeDetectionThreshold: 3.6
   minShakeInterval: 0.2
