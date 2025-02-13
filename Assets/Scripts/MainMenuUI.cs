@@ -8,6 +8,11 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private GameObject Shop;
     [SerializeField] private GameObject Settings;
 
+    private void Start()
+    {
+
+    }
+
     public void OpenWorldSelection()
     {
         MainTitle.SetActive(false);
