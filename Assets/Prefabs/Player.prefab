@@ -121,7 +121,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 1
+  m_AngularDrag: 1.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -150,11 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa23a07d611d2564c82b3b5360c7f609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splineAnimate: {fileID: 618053320081596725}
-  acceleration: 3
-  maxSpeed: 10
-  xMultiplier: 0.6
-  zMultiplier: 0.6
+  acceleration: 5
+  maxSpeed: 15
+  xMultiplier: 0.7
+  zMultiplier: 0.7
   yVelocity: 10
   shakeDetectionThreshold: 3.6
   minShakeInterval: 0.2

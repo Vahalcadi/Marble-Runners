@@ -12307,34 +12307,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: maxSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: xMultiplier
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: zMultiplier
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: acceleration
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -12374,14 +12346,6 @@ PrefabInstance:
     - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621786832946874638, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621786832946874638, guid: 319e375e91794444aa137968f362cafb, type: 3}
-      propertyPath: m_AngularDrag
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6973391982783527775, guid: 319e375e91794444aa137968f362cafb, type: 3}
       propertyPath: m_Name
