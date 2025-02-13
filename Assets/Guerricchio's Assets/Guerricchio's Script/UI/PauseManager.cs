@@ -40,8 +40,7 @@ public class PauseManager : MonoBehaviour
 
     public void Menu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Level1");
+        Application.Quit();
     }
     public void LoadNextLevel()
     {
