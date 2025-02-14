@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windDirection: {x: 1, y: 0, z: 0}
-  windStrength: 20
+  windStrength: 500
 --- !u!65 &6460495489593014249
 BoxCollider:
   m_ObjectHideFlags: 0
