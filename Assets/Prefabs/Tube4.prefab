@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 4070679480506213336}
   - component: {fileID: 5011866528572963800}
   - component: {fileID: 6823242902263498854}
-  - component: {fileID: 7099230561956223029}
-  - component: {fileID: 1060742886173796567}
   m_Layer: 0
   m_Name: Tube4
   m_TagString: Untagged
@@ -275,7 +273,7 @@ MonoBehaviour:
           z: 0
           w: 1
     - Position:
-        x: -29.4
+        x: -29.07
         y: -3.57
         z: 0.4
       TangentIn:
@@ -326,240 +324,22 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
-  - m_EditModeType: 1
-    m_Knots:
-    - Position:
-        x: -27.02
-        y: -4.45
-        z: 0.4
-      TangentIn:
-        x: 0
-        y: 0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -27.02
-        y: -12.29
-        z: 0.4
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -27.020004
-        y: -16.63
-        z: 6.07
-      TangentIn:
-        x: 0
-        y: -0.67
-        z: -6.49
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -27.020004
-        y: -16.63
-        z: 21.6
-      TangentIn:
-        x: 0
-        y: 0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -20.6
-        y: -16.63
-        z: 25.8
-      TangentIn:
-        x: -7.5
-        y: 0
-        z: 0.85
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -5.99
-        y: -16.63
-        z: 25.8
-      TangentIn:
-        x: 0
-        y: 0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -1.7508049
-        y: -16.626793
-        z: 19.401058
-      TangentIn:
-        x: 1.23
-        y: 0
-        z: 7.4
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -1.7508049
-        y: -16.626793
-        z: 6.46
-      TangentIn:
-        x: 0
-        y: 0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: -2.09
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -1.7508049
-        y: -12.5
-        z: -0
-      TangentIn:
-        x: 0
-        y: -5.01
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -1.7508049
-        y: -1
-        z: 0
-      TangentIn:
-        x: 0
-        y: 0
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: 5.06
-        y: 1.97
-        z: 0
-      TangentIn:
-        x: -6.61
-        y: 0.87
-        z: -0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    m_MetaData:
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
   m_Knots:
-    m_KnotsLink: []
+    m_KnotsLink:
+    - Knots:
+      - Spline: 1
+        Knot: 5
+      - Spline: 1
+        Knot: 6
+      - Spline: 1
+        Knot: 7
+      - Spline: 1
+        Knot: 9
+    - Knots:
+      - Spline: 1
+        Knot: 8
+      - Spline: 1
+        Knot: 10
 --- !u!114 &6823242902263498854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,51 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 6
-  isTwoWay: 1
-  startingSpline: 1
-  endingSpline: 0
---- !u!65 &7099230561956223029
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468530665074205430}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.127059, y: 3.7400002, z: 2.41}
-  m_Center: {x: 4.44829, y: 1.47, z: 0}
---- !u!65 &1060742886173796567
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468530665074205430}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.75, y: 4.7, z: 3.43}
-  m_Center: {x: -27.11, y: -3.51, z: 0.42}
+  hasStarted: 0
 --- !u!1001 &1405771150072563148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,13 +781,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7662064362541848959, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729574606878719815}
+    - targetCorrespondingSourceObject: {fileID: 7662064362541848959, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3586696685465718826}
   m_SourcePrefab: {fileID: 100100000, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
 --- !u!4 &5923289180266302009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6998257772589269957, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
   m_PrefabInstance: {fileID: 3687619603250072060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6446921064239878275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7662064362541848959, guid: ae3d84662a9ba1e48bde17fe9ac3055b, type: 3}
+  m_PrefabInstance: {fileID: 3687619603250072060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729574606878719815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446921064239878275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f11ce3fdbb3bee4c8127b4859534448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSplineFromEnd: 0
+--- !u!65 &3586696685465718826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446921064239878275}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.68, y: 4.89, z: 3}
+  m_Center: {x: -4.74, y: 1.86, z: 0}
 --- !u!1001 &3801632072096283890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1107,13 +888,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8831146094543079702, guid: bb690ce55ace841418ccbdb3b9137b3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4166416120608775958}
+    - targetCorrespondingSourceObject: {fileID: 8831146094543079702, guid: bb690ce55ace841418ccbdb3b9137b3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2899201739358535200}
   m_SourcePrefab: {fileID: 100100000, guid: bb690ce55ace841418ccbdb3b9137b3c, type: 3}
 --- !u!4 &4974019096189742942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8198055702802060204, guid: bb690ce55ace841418ccbdb3b9137b3c, type: 3}
   m_PrefabInstance: {fileID: 3801632072096283890}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5642047913280828900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8831146094543079702, guid: bb690ce55ace841418ccbdb3b9137b3c, type: 3}
+  m_PrefabInstance: {fileID: 3801632072096283890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4166416120608775958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642047913280828900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f11ce3fdbb3bee4c8127b4859534448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSplineFromEnd: 1
+--- !u!65 &2899201739358535200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642047913280828900}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3, z: 3}
+  m_Center: {x: 2.98, y: 0, z: 0}
 --- !u!1001 &4365150730038626764
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,18 +9,10 @@ public class Tube : MonoBehaviour
     private Rigidbody ballRigidBody;
     private SplineContainer splineContainer;
 
-    private Spline spline;
-
     [SerializeField] private float duration = 3;
 
-    [Header("check the boolean only if the tube is a two-way tube")]
-    [SerializeField] private bool isTwoWay = false;
-    [SerializeField] private int startingSpline; //the index of the first-way spline to use
-    [SerializeField] private int endingSpline; //the index of the last-way spline to use
-
-    private bool alternate;
-
-    private bool hasStarted;
+    private int startOffset;
+    [HideInInspector] public bool hasStarted;
 
     private void Start()
     {
@@ -28,52 +20,62 @@ public class Tube : MonoBehaviour
         splineContainer = GetComponent<SplineContainer>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void StartTubeLogic(Rigidbody rb, SplineAnimate sa, int startOffset)
     {
-        if (other.CompareTag("Player") && !hasStarted)
-        {
-            hasStarted = true;
-            InputManager.Instance.OnDisable();
-            ballRigidBody = other.GetComponent<Rigidbody>();
-            ballSplineAnimate = other.GetComponent<SplineAnimate>();
+        hasStarted = true;
+        InputManager.Instance.OnDisable();
+        ballRigidBody = rb;
+        ballSplineAnimate = sa;
 
-            ballRigidBody.useGravity = false;
-            ballSplineAnimate.Container = splineContainer;
-            ballRigidBody.linearVelocity = Vector3.zero;
-            ballRigidBody.angularVelocity = Vector3.zero;
+        ballRigidBody.useGravity = false;
+        ballSplineAnimate.Container = splineContainer;
+        ballRigidBody.linearVelocity = Vector3.zero;
+        ballRigidBody.angularVelocity = Vector3.zero;
 
-            ballSplineAnimate.AnimationMethod = SplineAnimate.Method.Time;
-            ballSplineAnimate.Duration = duration;
 
-            ballSplineAnimate.ElapsedTime = 0;
-            ballRigidBody.interpolation = RigidbodyInterpolation.None;
+        ballSplineAnimate.AnimationMethod = SplineAnimate.Method.Time;
+        ballSplineAnimate.Duration = duration;
 
-            ballSplineAnimate.Completed += ResetCoroutine;
-            if (!isTwoWay)
-                ballSplineAnimate.Play();        
-            else
-                StartCoroutine(TwoWayCoroutine());
-        }
+        ballSplineAnimate.ElapsedTime = 0;
+        ballRigidBody.interpolation = RigidbodyInterpolation.None;
+
+        ballSplineAnimate.Completed += ResetCoroutine;
+
+        this.startOffset = startOffset;
+        StartCoroutine(MoveBall());
     }
 
-    private void AlternateSplines()
+    private IEnumerator MoveBall()
     {
-        if (alternate)
-        {
-            spline = splineContainer.Splines[endingSpline];
-            alternate = false;
-        }
+        //ballSplineAnimate.StartOffset = startOffset;
+
+        if(startOffset == 0)
+            yield return StartToEnd();
         else
-        {
-            spline = splineContainer.Splines[startingSpline];
-            alternate = true;
-        }
-        
+            yield return EndToStart();
     }
 
-    private IEnumerator TwoWayCoroutine()
+    private IEnumerator EndToStart()
     {
-        AlternateSplines();
+        float t = 1;
+        float percentage = 1;
+
+        while (percentage >= 0)
+        {
+            yield return null;
+            t -= Time.deltaTime;
+            percentage = t / duration;
+
+            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
+
+            ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z);
+        }
+
+        ResetCoroutine();
+    }
+
+    private IEnumerator StartToEnd()
+    {
         float t = 0;
         float percentage = 0;
 
@@ -83,7 +85,7 @@ public class Tube : MonoBehaviour
             t += Time.deltaTime;
             percentage = t / duration;
 
-            Vector3 posEvaluated = spline.EvaluatePosition(percentage);
+            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
 
             ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z); 
         }
