@@ -29,8 +29,10 @@ public class GyroscopicMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.maxLinearVelocity = maxSpeed;
-        sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2);
+
+        rb.maxLinearVelocity = maxSpeed; //set the max speed the rigidbody can reach
+
+        sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2); //this is for the jump logic
     }
 
     // Update is called once per frame
@@ -41,8 +43,20 @@ public class GyroscopicMovement : MonoBehaviour
        else
             moveVector = new Vector3(InputManager.Instance.Move().z * zMultiplier, 0, InputManager.Instance.Move().x * xMultiplier);*/
 
+
+
+
+        /**
+         * if needed, create a new vector3 and adjust all the values the InputManager returns
+         * xMultiplier and zMultiplier = helper values to reach the desired speed. These values must be greater than zero. These are completely optional 
+         * **/
         moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
 
+
+
+        /**
+         * Jump logic
+         * **/
         if (IsGrounded)
         {
             if (InputManager.Instance.Jump().sqrMagnitude >= sqrShakeDetectionThreshold
@@ -58,6 +72,9 @@ public class GyroscopicMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /**
+         * add a force to the rigidbody. Forcemode is completely up to choice. 
+         * **/
         rb.AddForce(moveVector * acceleration, ForceMode.Force);
     }
 
