@@ -1,33 +1,43 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
-    public static CoinManager Instance;
-    private int coinsCollected = 0;
-    [SerializeField] private TextMeshProUGUI coinText;
+
+    public static CoinManager Instance { get; private set; }
+    public RawImage[] coinImages;  //image array
+    [SerializeField] Texture2D coinOff;
+    [SerializeField] Texture2D coinOn;
+
+    private int collectedCoins = 0;
 
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+        }
         else
+        {
             Destroy(gameObject);
-    }
-    private void Start()
-    {
-        UpdateUI();
+        }
     }
 
     public void CollectCoin()
     {
-        coinsCollected++;
-        UpdateUI();
+        if (collectedCoins < coinImages.Length)
+        {
+            coinImages[collectedCoins].texture = coinOn;
+            collectedCoins++;
+        }
     }
 
-    private void UpdateUI()
+    public void ResetCoins()
     {
-        coinText.text = coinsCollected.ToString() + "/3";
-
+        collectedCoins = 0;
+        foreach (RawImage img in coinImages)
+        {
+            img.texture = coinOff;
+        }
     }
 }

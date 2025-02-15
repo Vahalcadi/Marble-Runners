@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
     private static readonly Vector3 rotationAxis = new Vector3(1, 1, 0).normalized;
 
 
+
     void Update()
     {
         transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime, Space.Self);
