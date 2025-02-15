@@ -684,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   coinIndex: 0
+  transparentMaterial: {fileID: 2100000, guid: c5c01e2d969527b41892e2821ec77774, type: 2}
 --- !u!1 &272976998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   coinIndex: 1
+  transparentMaterial: {fileID: 2100000, guid: c5c01e2d969527b41892e2821ec77774, type: 2}
 --- !u!1 &885950497194686461
 GameObject:
   m_ObjectHideFlags: 0
@@ -6600,6 +6602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 50
   coinIndex: 2
+  transparentMaterial: {fileID: 2100000, guid: c5c01e2d969527b41892e2821ec77774, type: 2}
 --- !u!4 &7932031410149478488
 Transform:
   m_ObjectHideFlags: 0

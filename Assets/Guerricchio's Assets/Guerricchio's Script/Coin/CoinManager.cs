@@ -75,7 +75,15 @@ public class CoinManager : MonoBehaviour
             if (coinState == 1)
             {
                 coinImages[i].texture = coinOn;
-
+                Coin[] coins = Object.FindObjectsByType<Coin>(FindObjectsSortMode.None);
+                foreach (Coin coin in coins)
+                {
+                    if (coin.coinIndex == i)
+                    {
+                        coin.SetTransparent();
+                        break;
+                    }
+                }
 
             }
             else
