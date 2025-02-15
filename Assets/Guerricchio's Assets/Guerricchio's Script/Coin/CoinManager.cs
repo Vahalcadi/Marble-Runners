@@ -21,6 +21,8 @@ public class CoinManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        collectedCoins = PlayerPrefs.GetInt("CollectedCoins", 0);
     }
 
     public void CollectCoin()
@@ -29,6 +31,7 @@ public class CoinManager : MonoBehaviour
         {
             coinImages[collectedCoins].texture = coinOn;
             collectedCoins++;
+            SaveCoins();
         }
     }
 
@@ -39,5 +42,12 @@ public class CoinManager : MonoBehaviour
         {
             img.texture = coinOff;
         }
+        SaveCoins();
+    }
+
+    private void SaveCoins()
+    {
+        PlayerPrefs.SetInt("CollectedCoins", collectedCoins);
+        PlayerPrefs.Save();
     }
 }
