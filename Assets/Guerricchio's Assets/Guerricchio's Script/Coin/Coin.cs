@@ -5,7 +5,7 @@ public class Coin : MonoBehaviour
     [SerializeField] private float rotationSpeed = 100f;
     private static readonly Vector3 rotationAxis = new Vector3(1, 1, 0).normalized;
 
-
+    public int coinIndex;
 
     void Update()
     {
@@ -16,7 +16,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CoinManager.Instance.CollectCoin();
+            CoinManager.Instance.CollectCoin(coinIndex);
             Destroy(gameObject);
         }
     }
