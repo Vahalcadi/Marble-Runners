@@ -49,9 +49,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6902573867230041995, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: -6902573867230041995, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 17d1f95bdcbcb6243857670c2957f809, type: 2}
+    - target: {fileID: -4683669308469848369, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -61,9 +69,17 @@ PrefabInstance:
       value: PF_Catapult
       objectReference: {fileID: 0}
     - target: {fileID: 6944656104360116776, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944656104360116776, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 17d1f95bdcbcb6243857670c2957f809, type: 2}
+    - target: {fileID: 8100320773420232829, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 8100320773420232829, guid: be34f43b64660b14d9046215bbb914d3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

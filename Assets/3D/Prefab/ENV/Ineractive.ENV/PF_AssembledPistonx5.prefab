@@ -422,6 +422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Piston
       objectReference: {fileID: 0}
+    - target: {fileID: 8536833258487974228, guid: 33894c99f3f3d8c42a7a3081187c0d64, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
