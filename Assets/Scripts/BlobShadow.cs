@@ -3,12 +3,13 @@ using UnityEngine;
 public class BlobShadow : MonoBehaviour
 {
     Transform _transform;
-    [SerializeField] private Vector3 offset;
+    private Vector3 offset;
     [SerializeField] private Transform playerTransform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _transform = transform;
+        offset = _transform.position;
     }
 
     // Update is called once per frame
