@@ -15,7 +15,7 @@ public class BlobShadow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _transform.position = playerTransform.position + offset;
+        _transform.position = playerTransform.localPosition + offset;
     }
 
     private void FixedUpdate()

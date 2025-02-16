@@ -3075,6 +3075,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb9a09e645e9c4b489b4f5ce32f44de6, type: 3}
+--- !u!1 &1092067750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3553570548075941234, guid: eb9a09e645e9c4b489b4f5ce32f44de6, type: 3}
+  m_PrefabInstance: {fileID: 1092067749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1101581168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6043,7 +6048,7 @@ PrefabInstance:
     - target: {fileID: 4261078450762911555, guid: d444ac3457d98554cafb0e84140dae5f, type: 3}
       propertyPath: ball
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1092067750}
     - target: {fileID: 4261078450762911555, guid: d444ac3457d98554cafb0e84140dae5f, type: 3}
       propertyPath: defaultSpawnPoint
       value: 
