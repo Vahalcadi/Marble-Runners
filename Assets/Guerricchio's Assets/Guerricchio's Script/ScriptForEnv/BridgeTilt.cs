@@ -53,4 +53,39 @@ public class BridgeTilt : MonoBehaviour
 
         transform.rotation = toRotation;
     }
+
+    //[SerializeField] private float rotationAngle = 30f;
+    //[SerializeField] private float rotationSpeed = 2f;
+    //[SerializeField] private float interval = 3f;
+    //[SerializeField] private Vector3 rotationAxis = Vector3.right;
+
+    //private Quaternion initialRotation;
+    //private bool isRaising = true;
+
+    //private void Start()
+    //{
+    //    initialRotation = transform.rotation;
+    //    StartCoroutine(RotateBridge());
+    //}
+
+    //IEnumerator RotateBridge()
+    //{
+    //    while (true)
+    //    {
+    //        Quaternion targetRotation = initialRotation * Quaternion.Euler(rotationAxis * (isRaising ? rotationAngle : -rotationAngle));
+    //        float elapsedTime = 0f;
+
+    //        while (elapsedTime < rotationSpeed)
+    //        {
+    //            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, elapsedTime / rotationSpeed);
+    //            elapsedTime += Time.fixedDeltaTime;
+    //            yield return null;
+    //        }
+
+    //        transform.rotation = targetRotation;
+    //        isRaising = !isRaising;
+    //        yield return new WaitForSeconds(interval);
+    //    }
+    //}
+
 }
