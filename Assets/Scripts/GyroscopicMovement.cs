@@ -31,7 +31,6 @@ public class GyroscopicMovement : MonoBehaviour
     {
 
         rb.maxLinearVelocity = maxSpeed; //set the max speed the rigidbody can reach
-
         sqrShakeDetectionThreshold = Mathf.Pow(shakeDetectionThreshold, 2); //this is for the jump logic
     }
 
