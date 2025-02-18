@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cc64f26c-2184-4cdf-9c30-e29a455be49d}">
+		<property name="assetPath">
+			<value>SFX/MM_SFX_Tube_Rolling_Loop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.286875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f825a00c-fc6e-4ac9-b49f-c9fe2fd26898}</destination>
+		</relationship>
+	</object>
+</objects>

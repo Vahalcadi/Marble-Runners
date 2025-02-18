@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{db9b1426-8c36-474c-b149-f64644c3694a}">
+		<property name="assetPath">
+			<value>MUSIC/GG Level Music 2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>94.81483333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f825a00c-fc6e-4ac9-b49f-c9fe2fd26898}</destination>
+		</relationship>
+	</object>
+</objects>

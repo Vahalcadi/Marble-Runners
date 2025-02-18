@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{d7fed131-68e0-4d54-ae02-2e4b4ea99cc2}">
 		<property name="assetPath">
-			<value>GG Project Menu Music.wav</value>
+			<value>MUSIC/GG Project Menu Music.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
