@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6621786832946874638}
   - component: {fileID: 2118743139981312327}
   - component: {fileID: 618053320081596725}
+  - component: {fileID: 4303749153623494719}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -180,3 +181,22 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
+--- !u!114 &4303749153623494719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973391982783527775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da58a3d28420e84469f07fecba7168a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshFilter: {fileID: 3593348884109472290}
+  meshRenderer: {fileID: 7104901022231212168}
+  Skins:
+  - {fileID: 11400000, guid: fef6b44d65eb0fe4da34c6bd02d10bf8, type: 2}
+  - {fileID: 11400000, guid: fc2b98eb17beca54dab2bf31c670e81b, type: 2}
+  - {fileID: 11400000, guid: c29afdb50a7638543b0d288ad664b05c, type: 2}
+  - {fileID: 11400000, guid: 6bc8aff18c2845542ba297a6df6f6cae, type: 2}

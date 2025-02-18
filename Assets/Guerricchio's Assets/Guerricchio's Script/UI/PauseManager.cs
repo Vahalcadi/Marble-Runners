@@ -20,6 +20,12 @@ public class PauseManager : MonoBehaviour
     //    DontDestroyOnLoad(gameObject);
     //}
 
+    private void Start()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+
     public void TogglePause()
     {
         isPaused = !isPaused;

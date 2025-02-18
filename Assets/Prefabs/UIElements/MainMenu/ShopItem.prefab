@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4853479713848585955}
   - component: {fileID: 251405621827762293}
   - component: {fileID: 8290269015332810696}
+  - component: {fileID: 3253147038142860006}
   m_Layer: 5
   m_Name: ShopItem
   m_TagString: Untagged
@@ -88,7 +89,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 8290269015332810696}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -122,6 +123,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3253147038142860006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513060414813514885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c832f7eec02c8345b4c18ceb40b43b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <UUID>k__BackingField: 0
+  <Skin>k__BackingField: {fileID: 0}
+  priceTag: {fileID: 8772486737847898373}
+  cost: {fileID: 4637536548173074362}
 --- !u!1 &3251965534409316208
 GameObject:
   m_ObjectHideFlags: 0

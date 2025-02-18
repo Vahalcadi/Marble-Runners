@@ -7,26 +7,23 @@ public class SkinChanger : MonoBehaviour
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private MeshRenderer meshRenderer;
 
-    [SerializeField] private List<MeshChanger> Skins;
+    [SerializeField] private MeshChangerSO defaultSkin;
+    [SerializeField] private List<MeshChangerSO> Skins;
 
-    private int skinIndex;
+    private int skinUUID;
 
     private void Start()
     {
 
-        skinIndex = PlayerPrefs.GetInt("skinList", 0);
+        skinUUID = PlayerPrefs.GetInt("skinSelected", Skins.Count);
 
+        if (skinUUID == Skins.Count)
+        {
+            meshFilter.mesh = defaultSkin.Mesh;
+            meshRenderer.materials = defaultSkin.Materials;
+        }
 
-        meshFilter = Skins[skinIndex].MeshFilter;
-        meshRenderer = Skins[skinIndex].MeshRenderer;
+        meshFilter.mesh = Skins.Find(x => x.UUID == skinUUID).Mesh;
+        meshRenderer.materials = Skins.Find(x => x.UUID == skinUUID).Materials;
     }
-}
-[Serializable]
-public class MeshChanger
-{
-    [SerializeField] private MeshFilter meshFilter;
-    [SerializeField] private MeshRenderer meshRenderer;
-
-    public MeshFilter MeshFilter { get => meshFilter; }
-    public MeshRenderer MeshRenderer { get => meshRenderer; }
 }
