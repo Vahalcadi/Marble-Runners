@@ -1,5 +1,4 @@
-using FMOD.Studio;
-using FMODUnity;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +6,18 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [SerializeField] private EventReference[] BGM;
-    [SerializeField] private EventReference[] SFX;
+    [SerializeField] private FMODUnity.EventReference[] BGM;
+    [SerializeField] private FMODUnity.EventReference[] SFX;
 
-    private List<EventInstance> SFXEmitters;
-    private List<EventInstance> BGMEmitters;
+    private List<FMOD.Studio.EventInstance> SFXEmitters = new();
+    private List<FMOD.Studio.EventInstance> BGMEmitters = new();
+
+    private FMOD.Studio.VCA BGMController;
+    private FMOD.Studio.VCA SFXController;
+
 
     /*[SerializeField] private int bgmStartIndex;
     [SerializeField] private bool playAtStart;*/
-
     private void Awake()
     {
         if(Instance != null)
@@ -25,10 +27,24 @@ public class AudioManager : MonoBehaviour
 
 
         foreach (var bgm in BGM)
-            BGMEmitters.Add(RuntimeManager.CreateInstance(bgm));
+            BGMEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(bgm));
 
         foreach (var sfx in SFX)
-            SFXEmitters.Add(RuntimeManager.CreateInstance(sfx));
+            SFXEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(sfx));
+
+        
+    }
+
+    private void Start()
+    {
+        BGMController = FMODUnity.RuntimeManager.GetVCA($"vca:/MUSIC");
+        SFXController = FMODUnity.RuntimeManager.GetVCA($"vca:/SFX");
+
+        float BGMValue = PlayerPrefs.GetFloat("MUSIC", 1);
+        float SFXValue = PlayerPrefs.GetFloat("SFX", 1);
+
+        BGMController.setVolume(BGMValue);
+        SFXController.setVolume(SFXValue);
     }
 
     public void PlaySFXDirectly(int index)
