@@ -17,3 +17,10 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 76d30d70e9f1b0c4ca5b940d098305c9, type: 2}
   <SkinCost>k__BackingField: 0
+  <SoundEvent>k__BackingField:
+    Guid:
+      Data1: 1728567351
+      Data2: 1327346931
+      Data3: 423736990
+      Data4: 387901708
+    Path: event:/SFX/MM_SFX_PerrySpawn

@@ -17,3 +17,10 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 255a819369a90ee4a8bc27248bf6e671, type: 2}
   <SkinCost>k__BackingField: 0
+  <SoundEvent>k__BackingField:
+    Guid:
+      Data1: 346222485
+      Data2: 1133947544
+      Data3: -1345313664
+      Data4: 942548399
+    Path: event:/SFX/MM_SFX_ChtuluSpawn

@@ -17,3 +17,10 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 5ee36d232d7ec1b418be191d8c8626e4, type: 2}
   <SkinCost>k__BackingField: 0
+  <SoundEvent>k__BackingField:
+    Guid:
+      Data1: -485625892
+      Data2: 1181427794
+      Data3: 143768468
+      Data4: 1288496962
+    Path: event:/SFX/MM_SFX_CyberCatSpawn

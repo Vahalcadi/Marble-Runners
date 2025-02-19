@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102c730abc198fa44b2cce49acd8aaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  defaultSpawnPoint: {fileID: 0}
   ball: {fileID: 0}

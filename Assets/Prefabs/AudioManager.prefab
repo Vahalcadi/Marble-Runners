@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3669731828311155170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2822343586336262477}
+  - component: {fileID: 1122111431670471431}
+  - component: {fileID: 1410131767842610881}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2822343586336262477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669731828311155170}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1122111431670471431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669731828311155170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1ff79d301c4ab4e8f2e8cacc7dc1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM:
+  - Guid:
+      Data1: -1811192657
+      Data2: 1165174907
+      Data3: 409477786
+      Data4: -273275845
+    Path: event:/MUSIC/MM_Music_01
+  - Guid:
+      Data1: -1769308076
+      Data2: 1092112523
+      Data3: 1262593197
+      Data4: -476753465
+    Path: event:/MUSIC/MM_Music_02
+  - Guid:
+      Data1: 1094486441
+      Data2: 1306288687
+      Data3: -280407396
+      Data4: -1271304791
+    Path: event:/MUSIC/MM_Music_03
+  - Guid:
+      Data1: -611245888
+      Data2: 1101034310
+      Data3: 1798945968
+      Data4: 1131099523
+    Path: event:/MUSIC/MM_Music_04
+  - Guid:
+      Data1: 1480578510
+      Data2: 1329547686
+      Data3: -181563462
+      Data4: -178023529
+    Path: event:/MUSIC/MM_Music_MainMenu
+  SFX:
+  - Guid:
+      Data1: -165116813
+      Data2: 1294357993
+      Data3: -1587570044
+      Data4: 995430759
+    Path: event:/SFX/MM_SFX_Catapult
+  - Guid:
+      Data1: 346222485
+      Data2: 1133947544
+      Data3: -1345313664
+      Data4: 942548399
+    Path: event:/SFX/MM_SFX_ChtuluSpawn
+  - Guid:
+      Data1: 597121126
+      Data2: 1179144340
+      Data3: 1287376043
+      Data4: 1864476337
+    Path: event:/SFX/MM_SFX_Coin_Collect
+  - Guid:
+      Data1: -317207145
+      Data2: 1223085312
+      Data3: -223880814
+      Data4: -49919838
+    Path: event:/SFX/MM_SFX_Coin_Total
+  - Guid:
+      Data1: -485625892
+      Data2: 1181427794
+      Data3: 143768468
+      Data4: 1288496962
+    Path: event:/SFX/MM_SFX_CyberCatSpawn
+  - Guid:
+      Data1: -753987342
+      Data2: 1261000300
+      Data3: -2141965925
+      Data4: 847151610
+    Path: event:/SFX/MM_SFX_Marble_Spawn_Classic
+  - Guid:
+      Data1: -904097991
+      Data2: 1264746473
+      Data3: 996632458
+      Data4: -1229195920
+    Path: event:/SFX/MM_SFX_PenguinSpawn
+  - Guid:
+      Data1: 1728567351
+      Data2: 1327346931
+      Data3: 423736990
+      Data4: 387901708
+    Path: event:/SFX/MM_SFX_PerrySpawn
+  - Guid:
+      Data1: -1171606615
+      Data2: 1248289951
+      Data3: 2130283422
+      Data4: 607781127
+    Path: event:/SFX/MM_SFX_Spikes_Loop
+  - Guid:
+      Data1: -1947352503
+      Data2: 1123559070
+      Data3: 1254505146
+      Data4: -443865413
+    Path: event:/SFX/MM_SFX_Tube_Enter
+  - Guid:
+      Data1: 572384017
+      Data2: 1187994761
+      Data3: 1089339818
+      Data4: 1512924748
+    Path: event:/SFX/MM_SFX_Tube_Loop
+  - Guid:
+      Data1: 261483093
+      Data2: 1130236158
+      Data3: -1616510292
+      Data4: 1868694058
+    Path: event:/SFX/MM_SFX_Victory
+--- !u!114 &1410131767842610881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669731828311155170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1811192657
+      Data2: 1165174907
+      Data3: 409477786
+      Data4: -273275845
+    Path: event:/MUSIC/MM_Music_01
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

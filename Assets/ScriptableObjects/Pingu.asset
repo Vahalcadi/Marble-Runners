@@ -17,3 +17,10 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 3e7ed92bf1386cd419ed36b839badb9e, type: 2}
   <SkinCost>k__BackingField: 0
+  <SoundEvent>k__BackingField:
+    Guid:
+      Data1: -904097991
+      Data2: 1264746473
+      Data3: 996632458
+      Data4: -1229195920
+    Path: event:/SFX/MM_SFX_PenguinSpawn
