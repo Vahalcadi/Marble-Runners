@@ -54,6 +54,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7127301323930384598}
     m_Modifications:
+    - target: {fileID: 1701939820897257284, guid: 46fca398c58690c4ba23db07883594b5, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701939820897257284, guid: 46fca398c58690c4ba23db07883594b5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701939820897257284, guid: 46fca398c58690c4ba23db07883594b5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701939820897257284, guid: 46fca398c58690c4ba23db07883594b5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2096075331967198501, guid: 46fca398c58690c4ba23db07883594b5, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -172,6 +188,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7127301323930384598}
     m_Modifications:
+    - target: {fileID: 551840962625996740, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19691174
+      objectReference: {fileID: 0}
+    - target: {fileID: 551840962625996740, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19691174
+      objectReference: {fileID: 0}
+    - target: {fileID: 551840962625996740, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23584908
+      objectReference: {fileID: 0}
     - target: {fileID: 2111566228269298268, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
       propertyPath: m_Name
       value: StarsCollected
