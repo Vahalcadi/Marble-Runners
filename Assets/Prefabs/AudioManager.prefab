@@ -149,6 +149,36 @@ MonoBehaviour:
       Data3: -1616510292
       Data4: 1868694058
     Path: event:/SFX/MM_SFX_Victory
+  - Guid:
+      Data1: -1961041050
+      Data2: 1102163266
+      Data3: -994879333
+      Data4: 937594005
+    Path: event:/UI/MM_UI_Back
+  - Guid:
+      Data1: -651008340
+      Data2: 1094573674
+      Data3: 1411355022
+      Data4: -11659416
+    Path: event:/UI/MM_UI_Pause
+  - Guid:
+      Data1: 689613240
+      Data2: 1224975157
+      Data3: 799795121
+      Data4: 247587508
+    Path: event:/UI/MM_UI_Reasume
+  - Guid:
+      Data1: -124946783
+      Data2: 1152456380
+      Data3: 95861891
+      Data4: 2139341041
+    Path: event:/UI/MM_UI_Select
+  - Guid:
+      Data1: -1973856957
+      Data2: 1192400964
+      Data3: -709971836
+      Data4: -1771258231
+    Path: event:/UI/MM_UI_Start
 --- !u!114 &1410131767842610881
 MonoBehaviour:
   m_ObjectHideFlags: 0
