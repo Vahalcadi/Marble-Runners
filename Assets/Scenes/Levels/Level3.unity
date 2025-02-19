@@ -813,6 +813,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1891479025}
     m_Modifications:
     - target: {fileID: 5510840343574173056, guid: 3d6889e8066c5f043bf7f6107603e730, type: 3}
+      propertyPath: coinOn
+      value: 
+      objectReference: {fileID: 2800000, guid: 1a4a8c2a0fc1cf04abf1efa5ad740d39, type: 3}
+    - target: {fileID: 5510840343574173056, guid: 3d6889e8066c5f043bf7f6107603e730, type: 3}
+      propertyPath: coinOff
+      value: 
+      objectReference: {fileID: 2800000, guid: cb2d14e883e81a040ba69644555df7b3, type: 3}
+    - target: {fileID: 5510840343574173056, guid: 3d6889e8066c5f043bf7f6107603e730, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 0}

@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a01b69445dadbd846880d21e21be4c9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -193,6 +193,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687238260215088412, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd433f50c0261144cb24b1d73604385c, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c857cdb175e1f24988d9ced121e6c69, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8353209052415275230, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
       propertyPath: m_Name
       value: Slot2
@@ -295,6 +315,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687238260215088412, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27b3b66ad4dddac40b96312bba527060, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d94c79bc043192745ba485a47f40c490, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8353209052415275230, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
       propertyPath: m_Name
       value: Slot3
@@ -396,6 +436,26 @@ PrefabInstance:
     - target: {fileID: 1551443003633117752, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687238260215088412, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c43447031c321d946b5fdf5f6df3c116, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 60a6d38a397789948a13eb4fb0b37d46, type: 3}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247995803816141031, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8353209052415275230, guid: c9389c4ffa677594783fafb96bf58c0f, type: 3}
       propertyPath: m_Name
