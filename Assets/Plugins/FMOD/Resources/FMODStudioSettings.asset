@@ -388,10 +388,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
-  sourceProjectPath: FMOD/MM_GroupD/MM_GroupD.fspro
-  sourceBankPath: FMOD/MM_GroupD/Build
+  HasSourceProject: 0
+  HasPlatforms: 0
+  sourceProjectPath: Assets/FMOD/MM_GroupD/MM_GroupD.fspro
+  sourceBankPath: FMOD/MM_GroupD/Build/Mobile
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

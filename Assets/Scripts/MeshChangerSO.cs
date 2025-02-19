@@ -8,6 +8,7 @@ public class MeshChangerSO : ScriptableObject
     [SerializeField] private Mesh mesh;
     [SerializeField] private Material[] materials;
     [field: SerializeField] public int SkinCost { get; private set; }
+    [field: SerializeField] public FMODUnity.EventReference SoundEvent { get; private set; }
     public bool Unlocked { get; set; } = false;
 
     public Mesh Mesh { get => mesh; }
