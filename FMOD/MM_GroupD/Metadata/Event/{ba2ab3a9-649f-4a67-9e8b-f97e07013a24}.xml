@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ba2ab3a9-649f-4a67-9e8b-f97e07013a24}">
 		<property name="name">
-			<value>MM_SFX_Coin_Spikes_Loop</value>
+			<value>MM_SFX_Spikes_Loop</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

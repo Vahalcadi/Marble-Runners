@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{8bedc249-269e-42f8-ba3a-c64abb268be5}">
 		<property name="name">
-			<value>MM_SFX_Coin_Tube_Enter</value>
+			<value>MM_SFX_Tube_Enter</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
