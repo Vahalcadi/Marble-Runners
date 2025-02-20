@@ -1,17 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RestartTrigger : MonoBehaviour
 {
+
+    [SerializeField] private List<GameObject> vfxPrefabs = new List<GameObject>();
+    [SerializeField] private List<Transform> vfxSpawnPoints = new List<Transform>();
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            for (int i = 0; i < vfxPrefabs.Count; i++)
             {
-                SceneManager.LoadScene(nextSceneIndex);
+                if (vfxPrefabs[i] != null && i < vfxSpawnPoints.Count && vfxSpawnPoints[i] != null)
+                {
+                    Instantiate(vfxPrefabs[i], vfxSpawnPoints[i].position, Quaternion.Euler(-90, 0, 0));
+                }
             }
+            //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            //if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            //{
+            //    SceneManager.LoadScene(nextSceneIndex);
+            //}
         }
     }
 }
