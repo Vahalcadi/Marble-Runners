@@ -22,6 +22,8 @@ public class Tube : MonoBehaviour
 
     public void StartTubeLogic(Rigidbody rb, SplineAnimate sa, int startOffset)
     {
+        AudioManager.Instance.PlaySFXDirectly(10);
+
         hasStarted = true;
         InputManager.Instance.OnDisable();
         ballRigidBody = rb;
@@ -95,6 +97,8 @@ public class Tube : MonoBehaviour
 
     private void ResetCoroutine()
     {
+        AudioManager.Instance.StopSFXDirectly(10, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         ballSplineAnimate.Completed -= ResetCoroutine;
 
         ballRigidBody.useGravity = true;

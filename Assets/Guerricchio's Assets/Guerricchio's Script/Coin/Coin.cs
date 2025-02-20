@@ -32,6 +32,7 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CoinManager.Instance.CollectCoin(coinIndex);
+            AudioManager.Instance.PlaySFXDirectly(2);
             Destroy(gameObject);
         }
     }
