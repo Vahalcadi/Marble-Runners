@@ -17,6 +17,7 @@ public class GyroscopicMovement : MonoBehaviour
     [Range(0.1f, 10)][SerializeField] private float xMultiplier;
     [Range(0.1f, 10)][SerializeField] private float zMultiplier;
     private Vector3 moveVector;
+    [SerializeField] private LayerMask Ground;
 
     [SerializeField] private float aerialTimeBeforeDeath;
     [SerializeField] private Explosion explosionEffect;
@@ -91,7 +92,7 @@ public class GyroscopicMovement : MonoBehaviour
          * add a force to the rigidbody. Forcemode is completely up to choice. 
          * **/
         rb.AddForce(moveVector * acceleration, ForceMode.Force);
-        CheckGround();
+        CheckIsGrounded();
     }
 
     private void Jump()
@@ -119,7 +120,7 @@ public class GyroscopicMovement : MonoBehaviour
         }      
     }
 
-    private void CheckGround()
+    /*private void CheckGround()
     {
         float yPos = transform.position.y;
 
@@ -129,7 +130,7 @@ public class GyroscopicMovement : MonoBehaviour
         }
         else
             IsGrounded = true;
-    }
+    }*/
 
     public void ResetDeathTimer()
     {
@@ -150,7 +151,15 @@ public class GyroscopicMovement : MonoBehaviour
     }
 
     private Transform ReturnTransform() => transform;
+    private void CheckIsGrounded()
+    {
+        IsGrounded = Physics.Raycast(transform.position, transform.position + Vector3.down, transform.localScale.y / 1.5f, Ground);
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3.down * transform.localScale.y/1.5f));
+    }
     private void OnEnable()
     {
         OnReturnTransform += ReturnTransform;
