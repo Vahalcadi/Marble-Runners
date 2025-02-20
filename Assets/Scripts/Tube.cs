@@ -22,7 +22,7 @@ public class Tube : MonoBehaviour
 
     public void StartTubeLogic(Rigidbody rb, SplineAnimate sa, int startOffset)
     {
-        AudioManager.Instance.PlaySFXDirectly(10);
+        AudioManager.Instance.PlaySFXDirectly(10, null);
 
         hasStarted = true;
         InputManager.Instance.OnDisable();

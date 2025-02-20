@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private FMODUnity.EventReference[] BGM;
     [SerializeField] private FMODUnity.EventReference[] SFX;
+    [SerializeField] private float sfxMinimumDistance = 10;
+    [SerializeField] private bool setRandomPitch = false;
 
     private List<FMOD.Studio.EventInstance> SFXEmitters = new();
     private List<FMOD.Studio.EventInstance> BGMEmitters = new();
@@ -15,6 +17,7 @@ public class AudioManager : MonoBehaviour
     private FMOD.Studio.VCA BGMController;
     private FMOD.Studio.VCA SFXController;
 
+    private Transform playerTransform;
 
     /*[SerializeField] private int bgmStartIndex;
     [SerializeField] private bool playAtStart;*/
@@ -35,6 +38,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        playerTransform = GyroscopicMovement.OnReturnTransform.Invoke();
+
         BGMController = FMODUnity.RuntimeManager.GetVCA($"vca:/MUSIC");
         SFXController = FMODUnity.RuntimeManager.GetVCA($"vca:/SFX");
 
@@ -45,9 +50,19 @@ public class AudioManager : MonoBehaviour
         SFXController.setVolume(SFXValue);
     }
 
-    public void PlaySFXDirectly(int index)
+    public void PlaySFXDirectly(int index, Transform source)
     {
-        SFXEmitters[index].start();
+        if (source != null && Vector2.Distance(playerTransform.position, source.position) > sfxMinimumDistance)
+            return;
+
+        if (index < SFXEmitters.Count)
+        {
+            if(setRandomPitch)
+                SFXEmitters[index].setPitch(Random.Range(.85f, 1.1f));
+
+            SFXEmitters[index].start();
+        }
+
     }
 
     public void StopSFXDirectly(int index, FMOD.Studio.STOP_MODE stopMode)

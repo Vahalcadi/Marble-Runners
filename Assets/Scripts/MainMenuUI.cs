@@ -22,7 +22,7 @@ public class MainMenuUI : MonoBehaviour
         foreach (GameObject go in LevelSelections)
             go.SetActive(false);
 
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
     }
 
     public void OpenLevelSelection(int world)
@@ -35,7 +35,7 @@ public class MainMenuUI : MonoBehaviour
             go.SetActive(false);
 
         LevelSelections[world].SetActive(true);
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
     }
 
     public void OpenShop()
@@ -47,7 +47,7 @@ public class MainMenuUI : MonoBehaviour
         foreach (GameObject go in LevelSelections)
             go.SetActive(false);
 
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
     }
 
     public void OpenSetting()
@@ -59,6 +59,6 @@ public class MainMenuUI : MonoBehaviour
         foreach (GameObject go in LevelSelections)
             go.SetActive(false);
 
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
     }
 }

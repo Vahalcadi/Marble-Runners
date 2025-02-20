@@ -23,7 +23,7 @@ public class Catapult : MonoBehaviour
     public IEnumerator LaunchBall()
     {
         yield return new WaitForSeconds(timeBeforeLaunch);
-        AudioManager.Instance.PlaySFXDirectly(0);
+        AudioManager.Instance.PlaySFXDirectly(0, transform);
         ballSplineAnimate.Play();
     }
 
