@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        playerTransform = GyroscopicMovement.OnReturnTransform.Invoke();
+        playerTransform = GyroscopicMovement.OnReturnTransform?.Invoke();
 
         BGMController = FMODUnity.RuntimeManager.GetVCA($"vca:/MUSIC");
         SFXController = FMODUnity.RuntimeManager.GetVCA($"vca:/SFX");

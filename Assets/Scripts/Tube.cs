@@ -59,7 +59,7 @@ public class Tube : MonoBehaviour
 
     private IEnumerator EndToStart()
     {
-        float t = 1;
+        float t = duration;
         float percentage = 1;
 
         while (percentage >= 0)

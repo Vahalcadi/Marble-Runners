@@ -100,13 +100,15 @@ public class GyroscopicMovement : MonoBehaviour
             IsGrounded = false;
     }*/
 
+    private Transform ReturnTransform() => transform;
+
     private void OnEnable()
     {
-        OnReturnTransform += () => transform;
+        OnReturnTransform += ReturnTransform;
     }
 
     private void OnDisable()
     {
-        OnReturnTransform -= () => transform;
+        OnReturnTransform -= ReturnTransform;
     }
 }
