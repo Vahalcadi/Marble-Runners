@@ -111,6 +111,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7133461228248614541}
     m_Modifications:
+    - target: {fileID: 816468710824204906, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -195388477642195579, guid: 2d39d1f02aa9e4e40af5a5a593a26f23, type: 3}
+    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: petMeshRenderer
+      value: 
+      objectReference: {fileID: 2739231675469426142}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: Skins.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e9eb7ffd25f04eb4d9b33b05aa354a06, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d1adf12d517014f4fab13eff187b1a58, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fef6b44d65eb0fe4da34c6bd02d10bf8, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fc2b98eb17beca54dab2bf31c670e81b, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2601d89b0ea6fda42adfb7b9127c96ba, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b325671293a09064580367fdc67e99c7, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: eb6ed2cb621326e458fe626edeccc939, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c7a94b22932af1f4f92661a39328e012, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c29afdb50a7638543b0d288ad664b05c, type: 2}
+    - target: {fileID: 4303749153623494719, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: 'Skins.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bc8aff18c2845542ba297a6df6f6cae, type: 2}
+    - target: {fileID: 5082592735237806201, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -163,5 +219,10 @@ PrefabInstance:
 --- !u!4 &1869565715253983414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5216486162758323867, guid: 319e375e91794444aa137968f362cafb, type: 3}
+  m_PrefabInstance: {fileID: 5879069544857024045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2739231675469426142 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8616813425770585075, guid: 319e375e91794444aa137968f362cafb, type: 3}
   m_PrefabInstance: {fileID: 5879069544857024045}
   m_PrefabAsset: {fileID: 0}

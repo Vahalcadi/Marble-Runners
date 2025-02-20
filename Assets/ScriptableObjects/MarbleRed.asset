@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MarbleRed
   m_EditorClassIdentifier: 
   <UUID>k__BackingField: 9999
-  petMesh: {fileID: 0}
-  petMaterials: []
+  petMesh: {fileID: 2979823039005936454, guid: 08dadb016e86b7747a8610bd1378c99b, type: 3}
+  petMaterials:
+  - {fileID: 2100000, guid: 51fd8859084a2474d948844659b1cb27, type: 2}
   <marbleMesh>k__BackingField: {fileID: 2979823039005936454, guid: b0d5c4201297b304fa50ad1b1182fa4c, type: 3}
   <marbleMaterials>k__BackingField:
   - {fileID: 2100000, guid: 906d6d980c75b784182f1d24dad94722, type: 2}

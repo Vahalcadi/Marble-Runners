@@ -22,23 +22,15 @@ public class SkinChanger : MonoBehaviour
         skinUUID = PlayerPrefs.GetInt("skinSelected", 9999);
 
         if (skinUUID == defaultSkin.UUID)
-        {
             skin = defaultSkin;
-            petMesh.mesh = null;
-            petMeshRenderer.materials = null;
-
-            marbleMesh.mesh = skin.marbleMesh;
-            marbleMeshRenderer.materials = skin.marbleMaterials;
-        }
         else
-        {
             skin = Skins.Find(x => x.UUID == skinUUID);
-            petMesh.mesh = skin.PetMesh;
-            petMeshRenderer.materials = skin.PetMaterials;
 
-            marbleMesh.mesh = skin.marbleMesh;
-            marbleMeshRenderer.materials = skin.marbleMaterials;
-        }
+        petMesh.mesh = skin.PetMesh;
+        petMeshRenderer.materials = skin.PetMaterials;
+
+        marbleMesh.mesh = skin.marbleMesh;
+        marbleMeshRenderer.materials = skin.marbleMaterials;
 
         eventEmitter = GetComponent<StudioEventEmitter>();
 
