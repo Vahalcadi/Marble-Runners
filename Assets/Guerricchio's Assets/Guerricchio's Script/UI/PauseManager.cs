@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,7 +5,7 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject pauseButton;
-    [SerializeField] private TextMeshProUGUI objectivesText;
+    // [SerializeField] private TextMeshProUGUI objectivesText;
     [SerializeField] private GameObject optionsPanel;
     private bool isPaused = false;
 
@@ -41,13 +40,13 @@ public class PauseManager : MonoBehaviour
         optionsPanel.SetActive(false);
     }
 
-    public void UpdateObjectives(string[] objectives)
-    {
-        foreach (string obj in objectives)
-        {
-            objectivesText.text += "- " + obj + "\n \n";
-        }
-    }
+    //public void UpdateObjectives(string[] objectives)
+    //{
+    //    foreach (string obj in objectives)
+    //    {
+    //        objectivesText.text += "- " + obj + "\n \n";
+    //    }
+    //}
 
     public void Menu()
     {

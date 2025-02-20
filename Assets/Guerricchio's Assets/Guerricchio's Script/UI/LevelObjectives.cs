@@ -6,6 +6,6 @@ public class LevelObjectives : MonoBehaviour
 
     private void Start()
     {
-        Object.FindFirstObjectByType<PauseManager>()?.UpdateObjectives(objectives);
+        //  Object.FindFirstObjectByType<PauseManager>()?.UpdateObjectives(objectives);
     }
 }
