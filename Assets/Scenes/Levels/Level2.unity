@@ -5913,6 +5913,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6213304881291565925, guid: 6a4de0df6d8d81f40a9ef079ef59ffbf, type: 3}
   m_PrefabInstance: {fileID: 1195235012}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1202558789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3374350514308552382, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 1393187086}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112916738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d83e96baa5d94d4db3eeab8a5a8f2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1222318008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6811,6 +6822,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1735753354}
+    - target: {fileID: 734091201465419809, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1202558789}
+    - target: {fileID: 734091201465419809, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 734091201465419809, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VictoryPanelScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 891434066952389303, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6834,6 +6857,18 @@ PrefabInstance:
     - target: {fileID: 1325973295126111519, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537163298499269903, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1202558789}
+    - target: {fileID: 1537163298499269903, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537163298499269903, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VictoryPanelScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1729770498994373399, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
