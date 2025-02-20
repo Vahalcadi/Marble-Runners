@@ -1,3 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class RestartTrigger : MonoBehaviour
 {
 
@@ -13,7 +18,7 @@ public class RestartTrigger : MonoBehaviour
                 {
                     Instantiate(vfxPrefabs[i], vfxSpawnPoints[i].position, Quaternion.Euler(-90, 0, 0));
                 }
-                nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
                 if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
                 {
                     AudioManager.Instance.PlaySFXDirectly(11);
@@ -27,14 +32,16 @@ public class RestartTrigger : MonoBehaviour
             }
         }
 
-        private IEnumerator LoadSceneAsync(int index)
-        {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(index);
 
-            // Wait until the asynchronous scene fully loads
-            while (!asyncLoad.isDone)
-            {
-                yield return null;
-            }
+    }
+    private IEnumerator LoadSceneAsync(int index)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(index);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
+}
