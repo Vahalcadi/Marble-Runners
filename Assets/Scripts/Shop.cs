@@ -15,7 +15,7 @@ public class Shop : MonoBehaviour
     {
         for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
         {
-            AvailableCoins += PlayerPrefs.GetInt("CollectedCoins_Level" + SceneManager.GetSceneByBuildIndex(i).buildIndex, 0);
+            AvailableCoins += PlayerPrefs.GetInt("CollectedCoins_Level" + i, 0);
         }
         foreach (ShopItemUI sk in shopItems)
         {

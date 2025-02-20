@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Pingu
   m_EditorClassIdentifier: 
   <UUID>k__BackingField: 0
-  mesh: {fileID: 1099546338971483780, guid: 1e5c20d3012e27446b3709e1fba63d09, type: 3}
-  materials:
+  petMesh: {fileID: 1099546338971483780, guid: 1e5c20d3012e27446b3709e1fba63d09, type: 3}
+  petMaterials:
   - {fileID: 2100000, guid: 3e7ed92bf1386cd419ed36b839badb9e, type: 2}
-  <SkinCost>k__BackingField: 0
+  <marbleMesh>k__BackingField: {fileID: 2979823039005936454, guid: 08dadb016e86b7747a8610bd1378c99b, type: 3}
+  <marbleMaterials>k__BackingField:
+  - {fileID: 2100000, guid: 51fd8859084a2474d948844659b1cb27, type: 2}
+  <SkinCost>k__BackingField: 2
   <SoundEvent>k__BackingField:
     Guid:
       Data1: -904097991

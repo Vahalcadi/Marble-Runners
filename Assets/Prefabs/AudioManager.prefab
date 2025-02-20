@@ -76,6 +76,12 @@ MonoBehaviour:
       Data3: -181563462
       Data4: -178023529
     Path: event:/MUSIC/MM_Music_MainMenu
+  - Guid:
+      Data1: -1418320732
+      Data2: 1310018580
+      Data3: 1342551714
+      Data4: 1184095516
+    Path: event:/MUSIC/MM_Music_05
   SFX:
   - Guid:
       Data1: -165116813
@@ -179,6 +185,14 @@ MonoBehaviour:
       Data3: -709971836
       Data4: -1771258231
     Path: event:/UI/MM_UI_Start
+  - Guid:
+      Data1: 1154518917
+      Data2: 1185357708
+      Data3: -1447623534
+      Data4: 1867415051
+    Path: event:/SFX/MM_SFX_BallExplosion
+  sfxMinimumDistance: 10
+  setRandomPitch: 0
 --- !u!114 &1410131767842610881
 MonoBehaviour:
   m_ObjectHideFlags: 0
