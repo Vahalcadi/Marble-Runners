@@ -116,6 +116,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -195388477642195579, guid: 2d39d1f02aa9e4e40af5a5a593a26f23, type: 3}
     - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
+      propertyPath: Ground.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118743139981312327, guid: 319e375e91794444aa137968f362cafb, type: 3}
       propertyPath: petMeshRenderer
       value: 
       objectReference: {fileID: 2739231675469426142}
