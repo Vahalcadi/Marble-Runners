@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
+      propertyPath: vicoryPanel
+      value: 
+      objectReference: {fileID: 1112916738}
     - target: {fileID: 5108547596095935191, guid: 195e545383cc34b4fa9e439315167558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52.22
@@ -5583,6 +5587,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5215826243611719024, guid: 241e7c7d2b4cbb646bfa6d6a1217c2e7, type: 3}
   m_PrefabInstance: {fileID: 1103862956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1112916738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8838776754749800522, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 1393187086}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1114539433
 PrefabInstance:

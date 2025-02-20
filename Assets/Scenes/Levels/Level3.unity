@@ -2620,6 +2620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &226676511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8838776754749800522, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 226676508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &227483132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13877,6 +13882,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
+      propertyPath: vicoryPanel
+      value: 
+      objectReference: {fileID: 226676511}
     - target: {fileID: 5108547596095935191, guid: 195e545383cc34b4fa9e439315167558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -58.249027

@@ -2600,6 +2600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
+      propertyPath: vicoryPanel
+      value: 
+      objectReference: {fileID: 901233475}
     - target: {fileID: 5108547596095935191, guid: 195e545383cc34b4fa9e439315167558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65.246
@@ -2907,6 +2911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &901233475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8838776754749800522, guid: c9c25df9aeaf63243b405a2826ffc9ee, type: 3}
+  m_PrefabInstance: {fileID: 901233471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &903213310
 PrefabInstance:
   m_ObjectHideFlags: 0
