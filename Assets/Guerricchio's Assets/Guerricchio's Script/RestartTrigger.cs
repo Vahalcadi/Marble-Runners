@@ -12,7 +12,7 @@ public class RestartTrigger : MonoBehaviour
             nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
-                AudioManager.Instance.PlaySFXDirectly(11);
+                AudioManager.Instance.PlaySFXDirectly(11, transform);
                 LoadSceneAsync(nextSceneIndex);
             }
         }

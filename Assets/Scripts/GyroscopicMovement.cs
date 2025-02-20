@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.Splines;
 
 [RequireComponent(typeof(Rigidbody), typeof(SplineAnimate))]
 public class GyroscopicMovement : MonoBehaviour
 {
+    public static Func<Transform> OnReturnTransform;
+
     private Rigidbody rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
@@ -96,4 +99,14 @@ public class GyroscopicMovement : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
             IsGrounded = false;
     }*/
+
+    private void OnEnable()
+    {
+        OnReturnTransform += () => transform;
+    }
+
+    private void OnDisable()
+    {
+        OnReturnTransform -= () => transform;
+    }
 }

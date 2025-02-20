@@ -33,9 +33,9 @@ public class PauseManager : MonoBehaviour
         pauseButton.SetActive(!isPaused);
 
         if (isPaused)
-            AudioManager.Instance.PlaySFXDirectly(13);
+            AudioManager.Instance.PlaySFXDirectly(13, null);
         else
-            AudioManager.Instance.PlaySFXDirectly(14);
+            AudioManager.Instance.PlaySFXDirectly(14, null);
 
         Time.timeScale = isPaused ? 0f : 1f;
         optionsPanel.SetActive(false);
@@ -51,7 +51,7 @@ public class PauseManager : MonoBehaviour
 
     public void Menu()
     {
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
         SceneManager.LoadScene("MainMenu");
     }
     public void LoadNextLevel()
@@ -64,13 +64,13 @@ public class PauseManager : MonoBehaviour
     }
     public void OpenOptions()
     {
-        AudioManager.Instance.PlaySFXDirectly(15);
+        AudioManager.Instance.PlaySFXDirectly(15, null);
         optionsPanel.SetActive(true);
         pauseMenuUI.SetActive(false);
     }
     public void CloseOptions()
     {
-        AudioManager.Instance.PlaySFXDirectly(12);
+        AudioManager.Instance.PlaySFXDirectly(12, null);
         optionsPanel.SetActive(false);
         pauseMenuUI.SetActive(true);
     }

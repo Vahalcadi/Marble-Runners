@@ -10,7 +10,7 @@ public class LevelSelection : MonoBehaviour
 
     public void StartLevel(int index)
     {
-        AudioManager.Instance.PlaySFXDirectly(16);
+        AudioManager.Instance.PlaySFXDirectly(16, null);
         if (index < scenes.Length)
             StartCoroutine(LoadSceneAsync(index));
     }
