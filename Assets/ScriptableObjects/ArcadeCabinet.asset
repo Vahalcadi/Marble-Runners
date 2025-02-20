@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6469a0233f6d5643acd2ccfe80c6fc6, type: 3}
-  m_Name: DefaultSkin
+  m_Name: ArcadeCabinet
   m_EditorClassIdentifier: 
-  <UUID>k__BackingField: 9999
-  mesh: {fileID: -3190097789711724161, guid: 77b4d709bae39764eaeb72e838acc0ab, type: 3}
-  materials:
-  - {fileID: 2100000, guid: 906d6d980c75b784182f1d24dad94722, type: 2}
-  <SkinCost>k__BackingField: 0
+  <UUID>k__BackingField: 8
+  petMesh: {fileID: -1550514412580984892, guid: a7e1686abe9c3704cbe3ed2efd4d8bd2, type: 3}
+  petMaterials:
+  - {fileID: 2100000, guid: 7f2e2140db60ad34b9b6cc16f8e91986, type: 2}
+  <marbleMesh>k__BackingField: {fileID: -3190097789711724161, guid: 7cb43eb75430aff4e92f8e9563fad9bb, type: 3}
+  <marbleMaterials>k__BackingField:
+  - {fileID: 2100000, guid: 51fd8859084a2474d948844659b1cb27, type: 2}
+  <SkinCost>k__BackingField: 15
   <SoundEvent>k__BackingField:
     Guid:
       Data1: -753987342

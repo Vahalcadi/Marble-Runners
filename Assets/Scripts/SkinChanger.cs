@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SkinChanger : MonoBehaviour
 {
-    [SerializeField] private MeshFilter meshFilter;
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshFilter petMesh;
+    [SerializeField] private MeshRenderer petMeshRenderer;
+    [SerializeField] private MeshFilter marbleMesh;
+    [SerializeField] private MeshRenderer marbleMeshRenderer;
 
     [SerializeField] private MeshChangerSO defaultSkin;
     [SerializeField] private List<MeshChangerSO> Skins;
@@ -19,17 +21,23 @@ public class SkinChanger : MonoBehaviour
     {
         skinUUID = PlayerPrefs.GetInt("skinSelected", 9999);
 
-        if (skinUUID == 9999)
+        if (skinUUID == defaultSkin.UUID)
         {
             skin = defaultSkin;
-            meshFilter.mesh = skin.Mesh;
-            meshRenderer.materials = skin.Materials;
+            petMesh.mesh = null;
+            petMeshRenderer.materials = null;
+
+            marbleMesh.mesh = skin.marbleMesh;
+            marbleMeshRenderer.materials = skin.marbleMaterials;
         }
         else
         {
             skin = Skins.Find(x => x.UUID == skinUUID);
-            meshFilter.mesh = skin.Mesh;
-            meshRenderer.materials = skin.Materials;
+            petMesh.mesh = skin.PetMesh;
+            petMeshRenderer.materials = skin.PetMaterials;
+
+            marbleMesh.mesh = skin.marbleMesh;
+            marbleMeshRenderer.materials = skin.marbleMaterials;
         }
 
         eventEmitter = GetComponent<StudioEventEmitter>();

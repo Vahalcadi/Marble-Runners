@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6469a0233f6d5643acd2ccfe80c6fc6, type: 3}
+  m_Name: MarbleRed
+  m_EditorClassIdentifier: 
+  <UUID>k__BackingField: 9999
+  petMesh: {fileID: 0}
+  petMaterials: []
+  <marbleMesh>k__BackingField: {fileID: 2979823039005936454, guid: b0d5c4201297b304fa50ad1b1182fa4c, type: 3}
+  <marbleMaterials>k__BackingField:
+  - {fileID: 2100000, guid: 906d6d980c75b784182f1d24dad94722, type: 2}
+  <SkinCost>k__BackingField: 0
+  <SoundEvent>k__BackingField:
+    Guid:
+      Data1: -753987342
+      Data2: 1261000300
+      Data3: -2141965925
+      Data4: 847151610
+    Path: event:/SFX/MM_SFX_Marble_Spawn_Classic

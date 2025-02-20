@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6469a0233f6d5643acd2ccfe80c6fc6, type: 3}
-  m_Name: Pingu
+  m_Name: ArcadeStick
   m_EditorClassIdentifier: 
-  <UUID>k__BackingField: 0
-  petMesh: {fileID: 1099546338971483780, guid: 1e5c20d3012e27446b3709e1fba63d09, type: 3}
+  <UUID>k__BackingField: 7
+  petMesh: {fileID: -5495902117074765545, guid: 061ade6c14b6beb45b37e3a43b23b507, type: 3}
   petMaterials:
-  - {fileID: 2100000, guid: 3e7ed92bf1386cd419ed36b839badb9e, type: 2}
+  - {fileID: 2100000, guid: 7f2e2140db60ad34b9b6cc16f8e91986, type: 2}
   <marbleMesh>k__BackingField: {fileID: 2979823039005936454, guid: 08dadb016e86b7747a8610bd1378c99b, type: 3}
   <marbleMaterials>k__BackingField:
   - {fileID: 2100000, guid: 51fd8859084a2474d948844659b1cb27, type: 2}
-  <SkinCost>k__BackingField: 2
+  <SkinCost>k__BackingField: 12
   <SoundEvent>k__BackingField:
     Guid:
-      Data1: -904097991
-      Data2: 1264746473
-      Data3: 996632458
-      Data4: -1229195920
-    Path: event:/SFX/MM_SFX_PenguinSpawn
+      Data1: -753987342
+      Data2: 1261000300
+      Data3: -2141965925
+      Data4: 847151610
+    Path: event:/SFX/MM_SFX_Marble_Spawn_Classic
