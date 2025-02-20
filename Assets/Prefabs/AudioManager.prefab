@@ -179,6 +179,8 @@ MonoBehaviour:
       Data3: -709971836
       Data4: -1771258231
     Path: event:/UI/MM_UI_Start
+  sfxMinimumDistance: 10
+  setRandomPitch: 0
 --- !u!114 &1410131767842610881
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         ball.transform.position = currentCheckpoint;
         ballRigidBody.linearVelocity = Vector3.zero;
         ballRigidBody.angularVelocity = Vector3.zero;
+        ball.GetComponent<GyroscopicMovement>().ResetDeathTimer();
     }
     public void RestartLevel()
     {

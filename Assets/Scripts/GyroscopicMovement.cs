@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -15,6 +16,9 @@ public class GyroscopicMovement : MonoBehaviour
     [Range(0.1f, 10)][SerializeField] private float zMultiplier;
     private Vector3 moveVector;
 
+    [SerializeField] private float aerialTimeBeforeDeath;
+    [SerializeField] private Explosion explosionEffect;
+
     [Header("Shake Jump")]
     [SerializeField] private float yVelocity;
     [SerializeField] private float shakeDetectionThreshold;
@@ -24,6 +28,9 @@ public class GyroscopicMovement : MonoBehaviour
     private float timeSinceLastShake;
 
     private bool IsGrounded;
+
+    private float deathTimer = 0;
+    private Coroutine deathCoroutine;
 
     private void Awake()
     {
@@ -40,12 +47,16 @@ public class GyroscopicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Screen.orientation == ScreenOrientation.Portrait)
-            moveVector = new Vector3(InputManager.Instance.Move().x * xMultiplier, 0, -InputManager.Instance.Move().z * zMultiplier);
-       else
-            moveVector = new Vector3(InputManager.Instance.Move().z * zMultiplier, 0, InputManager.Instance.Move().x * xMultiplier);*/
 
-
+        /**
+         * Death anim
+         * **/
+        if (!IsGrounded && rb.useGravity)
+        {
+            deathTimer += Time.deltaTime;
+        }
+        else
+            ResetDeathTimer();
 
 
         /**
@@ -59,7 +70,7 @@ public class GyroscopicMovement : MonoBehaviour
         /**
          * Jump logic
          * **/
-        if (IsGrounded)
+        /*if (IsGrounded)
         {
             if (InputManager.Instance.Jump().sqrMagnitude >= sqrShakeDetectionThreshold
             && Time.unscaledTime >= timeSinceLastShake + minShakeInterval)
@@ -67,7 +78,7 @@ public class GyroscopicMovement : MonoBehaviour
                 Jump();
                 timeSinceLastShake = Time.unscaledTime;
             }
-        }
+        }*/
 
         //rb.linearVelocity = moveVector * speed;
     }
@@ -78,6 +89,7 @@ public class GyroscopicMovement : MonoBehaviour
          * add a force to the rigidbody. Forcemode is completely up to choice. 
          * **/
         rb.AddForce(moveVector * acceleration, ForceMode.Force);
+        CheckGround();
     }
 
     private void Jump()
@@ -87,18 +99,51 @@ public class GyroscopicMovement : MonoBehaviour
         IsGrounded = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private IEnumerator Die()
     {
-        if (collision.collider.CompareTag("Ground"))
+        if (deathCoroutine == null)
+        {
+            //play anim
+            explosionEffect.StartExplosion();
+            GetComponent<MeshRenderer>().enabled = false;
+            InputManager.Instance.OnDisable();
+            yield return new WaitForSeconds(1);
+            GetComponent<MeshRenderer>().enabled = true;
+            InputManager.Instance.OnEnable();
+            GameManager.Instance.RespawnBall();
+            deathCoroutine = null;
+        }      
+    }
+
+    private void CheckGround()
+    {
+        float yPos = transform.position.y;
+
+        if (transform.position.y > yPos || transform.position.y < yPos)
+        {
+            IsGrounded = false;
+        }
+        else
             IsGrounded = true;
     }
 
-    /*private void OnCollisionExit(Collision collision)
+    public void ResetDeathTimer()
     {
+        deathTimer = 0;
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
         if (collision.collider.CompareTag("Ground"))
-            IsGrounded = false;
-    }*/
+        {
+            if (deathTimer > aerialTimeBeforeDeath)
+                deathCoroutine = StartCoroutine(Die());
+            else
+                ResetDeathTimer();
+
+            IsGrounded = true;
+        }
+    }
 
     private Transform ReturnTransform() => transform;
 
