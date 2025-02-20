@@ -13,9 +13,9 @@ public class SetCoinsAndStarsUI : MonoBehaviour
         //starsCount.text = $"{PlayerPrefs.GetInt("starsCount", 0)}/{PlayerPrefs.GetInt("starsMaxCount")}";
         //coinsCount.text = $"{PlayerPrefs.GetInt("totalCoins", 0)}";
 
-        for (int i = 0; i < SceneManager.sceneCount; i++) 
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++) 
         {
-            coins += PlayerPrefs.GetInt("CollectedCoins_Level" + SceneManager.GetSceneAt(i).buildIndex, 0);
+            coins += PlayerPrefs.GetInt("CollectedCoins_Level" + i, 0);
         }
 
         coinsCount.text = $"{coins}";

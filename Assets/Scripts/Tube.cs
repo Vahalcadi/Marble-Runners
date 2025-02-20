@@ -22,6 +22,8 @@ public class Tube : MonoBehaviour
 
     public void StartTubeLogic(Rigidbody rb, SplineAnimate sa, int startOffset)
     {
+        AudioManager.Instance.PlaySFXDirectly(10, null);
+
         hasStarted = true;
         InputManager.Instance.OnDisable();
         ballRigidBody = rb;
@@ -57,16 +59,15 @@ public class Tube : MonoBehaviour
 
     private IEnumerator EndToStart()
     {
-        float t = 1;
+        float t = duration;
         float percentage = 1;
-
         while (percentage >= 0)
         {
             yield return null;
             t -= Time.deltaTime;
             percentage = t / duration;
 
-            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
+            Vector3 posEvaluated = transform.rotation * splineContainer.Spline.EvaluatePosition(percentage);
 
             ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z);
         }
@@ -85,7 +86,7 @@ public class Tube : MonoBehaviour
             t += Time.deltaTime;
             percentage = t / duration;
 
-            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
+            Vector3 posEvaluated = transform.rotation * splineContainer.Spline.EvaluatePosition(percentage);
 
             ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z); 
         }
@@ -95,6 +96,8 @@ public class Tube : MonoBehaviour
 
     private void ResetCoroutine()
     {
+        AudioManager.Instance.StopSFXDirectly(10, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         ballSplineAnimate.Completed -= ResetCoroutine;
 
         ballRigidBody.useGravity = true;

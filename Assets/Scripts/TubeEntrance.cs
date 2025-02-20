@@ -17,6 +17,7 @@ public class TubeEntrance : MonoBehaviour
 
         if (other.CompareTag("Player") && !tube.hasStarted)
         {
+            AudioManager.Instance.PlaySFXDirectly(9, transform);
             if (startSplineFromEnd)
                 tube.StartTubeLogic(rb, sa, 1);
             else

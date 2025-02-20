@@ -16,6 +16,8 @@ public class ShopItemUI : MonoBehaviour
     {
         if (Skin.Unlocked)
             PlayerPrefs.SetInt("skinSelected", Skin.UUID);
+
+        AudioManager.Instance.PlaySFXDirectly(15, null);
     }
 
     public void UnlockSkin()

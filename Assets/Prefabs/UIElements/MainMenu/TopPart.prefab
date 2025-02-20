@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarsCollected
       objectReference: {fileID: 0}
+    - target: {fileID: 2111566228269298268, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2568810385360422959, guid: 732d9c3dcee854041bfc7d8c9b92b3c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -1,5 +1,4 @@
-using FMOD.Studio;
-using FMODUnity;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +6,21 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [SerializeField] private EventReference[] BGM;
-    [SerializeField] private EventReference[] SFX;
+    [SerializeField] private FMODUnity.EventReference[] BGM;
+    [SerializeField] private FMODUnity.EventReference[] SFX;
+    [SerializeField] private float sfxMinimumDistance = 10;
+    [SerializeField] private bool setRandomPitch = false;
 
-    private List<EventInstance> SFXEmitters;
-    private List<EventInstance> BGMEmitters;
+    private List<FMOD.Studio.EventInstance> SFXEmitters = new();
+    private List<FMOD.Studio.EventInstance> BGMEmitters = new();
+
+    private FMOD.Studio.VCA BGMController;
+    private FMOD.Studio.VCA SFXController;
+
+    private Transform playerTransform;
 
     /*[SerializeField] private int bgmStartIndex;
     [SerializeField] private bool playAtStart;*/
-
     private void Awake()
     {
         if(Instance != null)
@@ -25,15 +30,39 @@ public class AudioManager : MonoBehaviour
 
 
         foreach (var bgm in BGM)
-            BGMEmitters.Add(RuntimeManager.CreateInstance(bgm));
+            BGMEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(bgm));
 
         foreach (var sfx in SFX)
-            SFXEmitters.Add(RuntimeManager.CreateInstance(sfx));
+            SFXEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(sfx));        
     }
 
-    public void PlaySFXDirectly(int index)
+    private void Start()
     {
-        SFXEmitters[index].start();
+        playerTransform = GyroscopicMovement.OnReturnTransform?.Invoke();
+
+        BGMController = FMODUnity.RuntimeManager.GetVCA($"vca:/MUSIC");
+        SFXController = FMODUnity.RuntimeManager.GetVCA($"vca:/SFX");
+
+        float BGMValue = PlayerPrefs.GetFloat("MUSIC", 1);
+        float SFXValue = PlayerPrefs.GetFloat("SFX", 1);
+
+        BGMController.setVolume(BGMValue);
+        SFXController.setVolume(SFXValue);
+    }
+
+    public void PlaySFXDirectly(int index, Transform source)
+    {
+        if (source != null && Vector2.Distance(playerTransform.position, source.position) > sfxMinimumDistance)
+            return;
+
+        if (index < SFXEmitters.Count)
+        {
+            if(setRandomPitch)
+                SFXEmitters[index].setPitch(Random.Range(.85f, 1.1f));
+
+            SFXEmitters[index].start();
+        }
+
     }
 
     public void StopSFXDirectly(int index, FMOD.Studio.STOP_MODE stopMode)
