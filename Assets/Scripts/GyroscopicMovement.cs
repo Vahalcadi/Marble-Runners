@@ -153,13 +153,10 @@ public class GyroscopicMovement : MonoBehaviour
     private Transform ReturnTransform() => transform;
     private void CheckIsGrounded()
     {
-        IsGrounded = Physics.Raycast(transform.position, transform.position + Vector3.down, transform.localScale.y / 1.5f, Ground);
+        IsGrounded = Physics.Raycast(transform.position, Vector2.down, 1, Ground);
+        Debug.Log(IsGrounded);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(transform.position, transform.position + (Vector3.down * transform.localScale.y/1.5f));
-    }
     private void OnEnable()
     {
         OnReturnTransform += ReturnTransform;
