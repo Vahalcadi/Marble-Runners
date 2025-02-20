@@ -8,6 +8,8 @@ public class GyroscopicMovement : MonoBehaviour
 {
     public static Func<Transform> OnReturnTransform;
 
+    [SerializeField] private MeshRenderer petMeshRenderer;
+
     private Rigidbody rb;
     [SerializeField] private float acceleration;
     [SerializeField] private float maxSpeed;
@@ -106,8 +108,10 @@ public class GyroscopicMovement : MonoBehaviour
             //play anim
             explosionEffect.StartExplosion();
             GetComponent<MeshRenderer>().enabled = false;
+            petMeshRenderer.enabled = false;
             InputManager.Instance.OnDisable();
             yield return new WaitForSeconds(1);
+            petMeshRenderer.enabled = true;
             GetComponent<MeshRenderer>().enabled = true;
             InputManager.Instance.OnEnable();
             GameManager.Instance.RespawnBall();

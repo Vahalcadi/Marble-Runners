@@ -9,5 +9,7 @@ public class Explosion : MonoBehaviour
     {
         foreach (var particle in particles)
             particle.Play();
+
+        AudioManager.Instance.PlaySFXDirectly(17, null);
     }
 }
