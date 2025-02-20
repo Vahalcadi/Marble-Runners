@@ -61,14 +61,13 @@ public class Tube : MonoBehaviour
     {
         float t = duration;
         float percentage = 1;
-
         while (percentage >= 0)
         {
             yield return null;
             t -= Time.deltaTime;
             percentage = t / duration;
 
-            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
+            Vector3 posEvaluated = transform.rotation * splineContainer.Spline.EvaluatePosition(percentage);
 
             ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z);
         }
@@ -87,7 +86,7 @@ public class Tube : MonoBehaviour
             t += Time.deltaTime;
             percentage = t / duration;
 
-            Vector3 posEvaluated = splineContainer.Spline.EvaluatePosition(percentage);
+            Vector3 posEvaluated = transform.rotation * splineContainer.Spline.EvaluatePosition(percentage);
 
             ballRigidBody.transform.position = new Vector3(transform.position.x + posEvaluated.x, transform.position.y + posEvaluated.y, transform.position.z + posEvaluated.z); 
         }
