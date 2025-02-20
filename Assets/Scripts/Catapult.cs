@@ -18,24 +18,27 @@ public class Catapult : MonoBehaviour
     [SerializeField] private float speed = 15;
 
     private Coroutine coroutine;
-
+    private Animator animator;
 
     public IEnumerator LaunchBall()
     {
         yield return new WaitForSeconds(timeBeforeLaunch);
         AudioManager.Instance.PlaySFXDirectly(0, transform);
+        animator.SetBool("Launch", true);
         ballSplineAnimate.Play();
     }
 
     private void Start()
     {
         splineContainer = GetComponent<SplineContainer>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void ResetCoroutine()
     {
 
         ballSplineAnimate.Completed -= ResetCoroutine;
+        animator.SetBool("Launch", false);
 
         ballRigidBody.useGravity = true;
         InputManager.Instance.OnEnable();
