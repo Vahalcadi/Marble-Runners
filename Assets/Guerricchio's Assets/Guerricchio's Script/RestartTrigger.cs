@@ -1,17 +1,31 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RestartTrigger : MonoBehaviour
 {
+    int nextSceneIndex;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
-                SceneManager.LoadScene(nextSceneIndex);
+                AudioManager.Instance.PlaySFXDirectly(11);
+                LoadSceneAsync(nextSceneIndex);
             }
+        }
+    }
+
+    private IEnumerator LoadSceneAsync(int index)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(index);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 }

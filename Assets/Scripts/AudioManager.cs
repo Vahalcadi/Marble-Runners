@@ -30,9 +30,7 @@ public class AudioManager : MonoBehaviour
             BGMEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(bgm));
 
         foreach (var sfx in SFX)
-            SFXEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(sfx));
-
-        
+            SFXEmitters.Add(FMODUnity.RuntimeManager.CreateInstance(sfx));        
     }
 
     private void Start()

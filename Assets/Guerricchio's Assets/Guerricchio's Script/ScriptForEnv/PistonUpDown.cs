@@ -33,6 +33,7 @@ public class PistonUpDown : MonoBehaviour
     public void ActivatePiston()
     {
         isMovingUp = true;
+        AudioManager.Instance.PlaySFXDirectly(8);
     }
 
 }
