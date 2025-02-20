@@ -7,7 +7,7 @@ public class LevelSelection : MonoBehaviour
 {
     [SerializeField] private string[] scenes;
     [SerializeField] private Button[] buttons;
-
+   
     public void StartLevel(int index)
     {
         AudioManager.Instance.PlaySFXDirectly(16, null);
@@ -29,4 +29,6 @@ public class LevelSelection : MonoBehaviour
             yield return null;
         }
     }
+
+    
 }
