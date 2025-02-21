@@ -9,11 +9,14 @@ public class RestartTrigger : MonoBehaviour
     [SerializeField] private List<GameObject> vfxPrefabs = new List<GameObject>();
     [SerializeField] private List<Transform> vfxSpawnPoints = new List<Transform>();
     [SerializeField] private GameObject vicoryPanel;
+    [SerializeField] private GameObject pauseButton;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             vicoryPanel.SetActive(true);
+            pauseButton.SetActive(false);
             InputManager.Instance.OnDisable();
             for (int i = 0; i < vfxPrefabs.Count; i++)
             {

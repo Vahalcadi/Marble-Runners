@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class VictoryPanelScript : MonoBehaviour
 {
+
     public void LoadNextLevel()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
