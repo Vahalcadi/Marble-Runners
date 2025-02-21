@@ -2857,6 +2857,10 @@ PrefabInstance:
       value: FinishLevel
       objectReference: {fileID: 0}
     - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1711099427}
+    - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
       propertyPath: vicoryPanel
       value: 
       objectReference: {fileID: 901233475}
@@ -7617,79 +7621,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6128f4251db75042873096a9888e057, type: 3}
---- !u!1001 &1970404791
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4790767214066051763, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: 'objectives.Array.data[0]'
-      value: CIAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 4790767214066051763, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: 'objectives.Array.data[1]'
-      value: CIAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 4790767214066051763, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: 'objectives.Array.data[2]'
-      value: CIAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5499967246732951754, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_Name
-      value: LevelObjectives
-      objectReference: {fileID: 0}
-    - target: {fileID: 5499967246732951754, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2083.7412
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3180.523
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -41.737305
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665505259101441835, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 70b16ee20391f774eb6453a83cb254f9, type: 3}
 --- !u!1001 &2019851387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8320,7 +8251,6 @@ SceneRoots:
   - {fileID: 779357327}
   - {fileID: 176465344}
   - {fileID: 901233471}
-  - {fileID: 1970404791}
   - {fileID: 1773848123}
   - {fileID: 843110031}
   - {fileID: 1256483165}

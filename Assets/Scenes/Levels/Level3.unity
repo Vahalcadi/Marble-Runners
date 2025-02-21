@@ -15685,6 +15685,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1924132347}
+    - target: {fileID: 4834872855030364921, guid: 195e545383cc34b4fa9e439315167558, type: 3}
       propertyPath: vicoryPanel
       value: 
       objectReference: {fileID: 74942688}
