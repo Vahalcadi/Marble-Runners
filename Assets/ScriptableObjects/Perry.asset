@@ -19,7 +19,7 @@ MonoBehaviour:
   <marbleMesh>k__BackingField: {fileID: -3190097789711724161, guid: 7cb43eb75430aff4e92f8e9563fad9bb, type: 3}
   <marbleMaterials>k__BackingField:
   - {fileID: 2100000, guid: 51fd8859084a2474d948844659b1cb27, type: 2}
-  <SkinCost>k__BackingField: 4
+  <SkinCost>k__BackingField: 2
   <SoundEvent>k__BackingField:
     Guid:
       Data1: 1728567351
